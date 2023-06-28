@@ -1,5 +1,7 @@
-<!-- Created by Sourav Chakraborty -->
-
+<!-- Created by Sourav Chakraborty -->
+
+
+
 <!DOCTYPE html>
 <!--created by sourav chakraborty-->
     <html lang="en">
@@ -60,7 +62,31 @@
            
            <h2>top instructors</h2>
            
-<script src="app.js"></script> 
+<script>
+    // Created by Sourav Chakraborty
+
+
+
+// Created by Sourav Chakraborty
+
+
+window.onload = function(){
+
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+});
+
+}
+  
+</script> 
 </body>
                  
 </html>
