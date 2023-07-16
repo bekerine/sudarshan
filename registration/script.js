@@ -1,3 +1,5 @@
+// javascript code for register.html
+
 let signupBtn = document.querySelector(".sub");
     let loginBtn= document.querySelector(".lb");  
     let signupDiv = document.querySelector(".signup-div");
