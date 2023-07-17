@@ -1,93 +1,231 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding:0;
-    background-color:black;
-  }
-  
-  h1 {
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding:0;
+  background-color:black;
+}
+
+h1 {
+  text-align: center;
+  color:white;
+}
+
+#quiz-container {
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+#result {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+
+button{
+color:white;
+font-size:1.4rem;
+    background:orangered;
+    position:relative;
+    padding:15px 25px;
+    box-shadow:-6px 6px 0 hsl(16,100%,30%);
+    outline:none;
+    border:none;
+    font-family:italic;
+    display: block;
+  margin: 0 auto;
+}
+button:hover{
+    background:hsl(16,100%,45%);
+}
+button:active{
+    background:hsl(16,100%,40%);
+    top:3px;
+    left:-3px;
+    box-shadow:-3px 3px 0 hsl(16,100%,30%);
+}
+button::before{
+    position:absolute;
+    display:block;
+    content:"";
+    height:0;
+    width:0;
+    border:solid 6px transparent;
+    border-right:solid 6px hsl(16,100%,30%);
+    border-left-width:0;
+    top:0;
+    left:-6px;
+}
+button::after{
+    position:absolute;
+    display:block;
+    content:"";
+    height:0;
+    width:0;
+    border:solid 6px transparent;
+    border-top: solid 6px hsl(16,100%,30%);
+    border-bottom-width:0;
+    right:0;
+    bottom:-6px;
+}
+button:active::before{
+    border:solid 3px transparent;
+    border-right:solid 3px hsl(16,100%,30%);
+    border-left-width:0;
+    left:-3px;
+}
+button:active::after{
+    border:solid 3px transparent;
+    border-top:solid 3px hsl(16,100%,30%);
+    border-bottom-width:0;
+    bottom:-3px;
+}
+
+
+
+
+
+h2{
+    text-align:center;
     color:white;
-  }
-  
-  #quiz-container {
-    margin-bottom: 20px;
-  }
-  
-  #result {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  button{
-      margin-left:45%;
-      font-size:15px;
-      padding:5px;
-      background-color:white;
-      color:black;
-      border:none;
-      border-radius:5px;
-      
-      box-shadow: 0px 0px 20px 8px #3cc6d8; 
-      
-  }
-  h2{
-      text-align:center;
-      color:white;
-  }
-  p{
-      text-align:center;
-      color:white;
-  }
-  
-  
-  
-  .color-checkbox {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    font-size:20px;
-  }
-  
-  .color-checkbox checked;{
-      background-color:green;
-  }
-  
-  .color-checkbox input[type="checkbox"] {
-    opacity: 0;
-    position: absolute;
-    cursor: pointer;
-  }
-  
-  .checkmark {
+}
+p{
+    text-align:center;
+    color:white;
+}
+
+
+
+.color-checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size:20px;
+}
+
+.color-checkbox checked;{
+    background-color:green;
+}
+
+.color-checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+/*checkmark {
+  padding:8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #eee;
+  line-height: 20px;
+  text-align: center;
+  /*box-shadow: 0px 0px 20px 8px #3cc6d8;*/
+/*}*/
+
+.color-checkbox input[type="checkbox"]:checked + .checkmark{
+  background-color: #00ff00;
+  box-shadow:-6px 6px 0 hsl(16,0%,30%);
+}
+
+label{
+    width:40px;
+    height:40px;
     padding:8px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: 40px;
-    background-color: #eee;
-    line-height: 20px;
-    text-align: center;
-    
-    box-shadow: 0px 0px 20px 8px #3cc6d8;
-    
-  }
-  
-  .color-checkbox input[type="checkbox"]:checked + .checkmark{
-    background-color: #00ff00;
-  }
-  
-  label{
-      width:40px;
-      height:40px;
-      padding:8px;
-  }
-  .grid{
-      display: grid;
-      grid-template-columns: repeat(5, .1fr);
-      grid-gap: 10px;
-      margin-left:40px;
-      margin-right:32px;
-      background-color:black;
-  }
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, .1fr);
+    grid-gap: 10px;
+    margin-left:10%;
+    margin-right:0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkmark{
+color:white;
+font-size:1.4rem;
+    background:orangered;
+    position:relative;
+    padding:15px 25px;
+    box-shadow:-6px 6px 0 hsl(16,100%,30%);
+    outline:none;
+    border:none;
+    font-family:italic;
+    display: block;
+  margin: 0 auto;
+  height: 20px;
+  width: 5px;
+}
+.checkmark:hover{
+    background:hsl(16,100%,45%);
+}
+.checkmark:active{
+    background:hsl(16,100%,40%);
+    top:3px;
+    left:-3px;
+    box-shadow:-3px 3px 0 hsl(16,100%,30%);
+}
+.checkmark::before{
+    position:absolute;
+    display:block;
+    content:"";
+    height:0;
+    width:0;
+    border:solid 6px transparent;
+    border-right:solid 6px hsl(16,100%,30%);
+    border-left-width:0;
+    top:0;
+    left:-6px;
+}
+.checkmark::after{
+    position:absolute;
+    display:block;
+    content:"";
+    height:0;
+    width:0;
+    border:solid 6px transparent;
+    border-top: solid 6px hsl(16,100%,30%);
+    border-bottom-width:0;
+    right:0;
+    bottom:-6px;
+}
+.checkmark:active::before{
+    border:solid 3px transparent;
+    border-right:solid 3px hsl(16,100%,30%);
+    border-left-width:0;
+    left:-3px;
+}
+.checkmark:active::after{
+    border:solid 3px transparent;
+    border-top:solid 3px hsl(16,100%,30%);
+    border-bottom-width:0;
+    bottom:-3px;
+}
