@@ -32,7 +32,7 @@ function checkAnswers() {
       for (var i = 0; i < selectedAnswers.length; i++) {
         if (!correctAnswers.includes(selectedAnswers[i])) {
           allCorrect = false;
-          resultContainer.innerHTML += '<p>Incorrect answer for question ' + question.substr(1) + '.</p> <a href="#"><button>get explanation</button></a>';
+          resultContainer.innerHTML += '<p>Incorrect answer for question ' + question.substr(1) + '.<a href="#"><button>get explanation</button></a></p> ';
           break;
         }
       }
