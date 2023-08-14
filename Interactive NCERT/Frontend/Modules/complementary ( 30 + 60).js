@@ -10,7 +10,7 @@ let questionNumber = 1;
 function setup() {
   createCanvas(400, 250);
 
-  circle1 = new Circle(100, 150, 50, PI*0.165); // The first circle's radius is set to 150 degrees (PI/2 radians)
+  circle1 = new Circle(100, 150, 50, PI*-0.165); // The first circle's radius is set to 150 degrees (PI/2 radians)
   circle2 = new Circle(300, 150, 50, 0, PI); // The second circle's radius starts at 0 degrees (HALF_PI radians)
 
 
@@ -38,7 +38,7 @@ function resetFigure() {
 }
 
 function checkCondition() {
-  if (round(degrees(circle2.angle)) === 60) {
+  if (round(degrees(circle2.angle)) === -60) {
     successMessage = true;
     retryButton.hide();
     nextButton.show();
@@ -106,7 +106,7 @@ class Circle {
     // Display the angle as text
     noStroke();
     fill(0);
-    text(round(degrees(this.angle)) + "°", this.x + this.r + 10, this.y + 5);
+    text(round(degrees(-this.angle)) + "°", this.x + this.r + 10, this.y + 5);
   }
 }
 
