@@ -1,13 +1,13 @@
 let circle1Center, circle2Center;
 let circleRadius = 100;
-let angle1, angle2 = 0;
 let initialAngle1 = 0, initialAngle2 = 0;
-
-let submitButton;
+let angle1, angle2 = 0;
 let resultMessage = "";
 
+let submitButton, resetButton;
+
 function setup() {
-  createCanvas(800, 500); // Adjusted canvas height for the button
+  createCanvas(800, 500); // Adjusted canvas height for the buttons
   circle1Center = createVector(width / 4, height / 2);
   circle2Center = createVector(3 * width / 4, height / 2);
 
@@ -16,11 +16,14 @@ function setup() {
   // Create the submit button
   submitButton = createButton('Submit');
   submitButton.position(circle2Center.x - 40, circle2Center.y + circleRadius + 20);
-  submitButton.style('background-color', 'green');
-  submitButton.style('color', 'white');
-  submitButton.style('padding', '10px 20px');
-  submitButton.style('font-size', '16px');
+  styleButton(submitButton);
   submitButton.mousePressed(submitHandler);
+
+  // Create the reset button
+  resetButton = createButton('Reset');
+  resetButton.position(width - 100, 20);
+  styleButton(resetButton);
+  resetButton.mousePressed(resetHandler);
 }
 
 function draw() {
@@ -76,7 +79,10 @@ function drawCircle(center, currentAngle, initialAngle) {
   if (mouseIsPressed && center === circle2Center) {
     let distance = dist(mouseX, mouseY, center.x, center.y);
     if (distance <= circleRadius) {
-      angle2 = atan2(mouseY - center.y, mouseX - center.x);
+      angle2 = atan2(mouseY - center.y, mouseX - center.x) - initialAngle2;
+      if (angle2 < 0) {
+        angle2 += TWO_PI;
+      }
     }
   }
 }
@@ -102,3 +108,16 @@ function submitHandler() {
   }
 }
 
+function resetHandler() {
+  // Reset angles and result message
+  angle2 = 0;
+  initialAngle2 = 0; // Reset initial angle to 0
+  resultMessage = "";
+}
+
+function styleButton(button) {
+  button.style('background-color', 'green');
+  button.style('color', 'white');
+  button.style('padding', '10px 20px');
+  button.style('font-size', '16px');
+}
