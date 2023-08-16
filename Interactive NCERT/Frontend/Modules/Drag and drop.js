@@ -47,7 +47,11 @@ function setup() {
   // Create buttons
                  
   let subBut = createButton("Submit");
-  subBut.position(width/2,18*height/20);
+  subBut.position(width/2-40,18*height/22);
+  subBut.style('background-color', 'green');
+  subBut.style('color', 'white');
+  subBut.style('padding', '10px 20px');
+  subBut.style('font-size', '16px');
   subBut.mousePressed(veri);
 
 }
