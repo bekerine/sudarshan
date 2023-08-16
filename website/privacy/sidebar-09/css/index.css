@@ -1,3 +1,4 @@
+/* footer start */
 hr{
     width:90%;
     margin-right:auto;
@@ -35,11 +36,11 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
+/* footer end */
 /* #sidebar{
     position: fixed;
 } */
-
+/* go to top start */
 #myBtn {
     display: none;
     position: fixed;
@@ -59,23 +60,8 @@ footer a:hover {
   #myBtn:hover {
     background-color: #555;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* go to top end */
+/* dropdown start */
 .dropbtn {
   background-color: #007bff;
   color: white;
@@ -115,3 +101,4 @@ footer a:hover {
 .dropdown:hover .dropbtn {
   background-color: #6610f2;
 }
+/* dropdown end */
