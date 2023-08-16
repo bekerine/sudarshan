@@ -4,12 +4,6 @@
   text-align: justify;
 }
 
-@media screen and (max-width: 37.5rem) {
-  .box1 {
-    
-  }
-}
-
 .TWI {
   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiBUHziT6BBm1PaM3EW2MgUnFJvj-5gMwMTjDDeMhZ82EdY1Mu");
   width: 9.375rem;
