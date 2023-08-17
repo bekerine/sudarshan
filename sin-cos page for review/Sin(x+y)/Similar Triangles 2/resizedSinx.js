@@ -21,6 +21,11 @@ function setup() {
   Hypo=350;
   LineX=xStart+Hypo*cos(xAngle);
 
+  // Create buttons
+ 
+  let subBut = createButton("Submit");
+  subBut.position(1*width/10,19*height/20);
+  subBut.mousePressed(veri);
   
 }
 
@@ -219,4 +224,11 @@ function heightValue(){
      // arc(xStart+Hypo*cos(xAngle+yAngle),yStart-Hypo*sin(xAngle+yAngle),Hypo*0.25,Hypo*0.25,90-xAngle,90);
   
     pop();
-  }   
+  } 
+  
+  function veri(){
+    if(LineX>xStart+Hypo*cos(xAngle)*cos(yAngle)-2 && LineX<xStart+Hypo*cos(xAngle)*cos(yAngle)+2)
+      window.alert("Congradulations!!");
+    else
+      window.alert("Wrong Position :(");
+  }

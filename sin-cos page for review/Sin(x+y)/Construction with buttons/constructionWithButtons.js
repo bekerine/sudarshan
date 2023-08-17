@@ -145,7 +145,7 @@ function labels(){
   text('y',xStart+width/10,yStart-height/13);
   pop();
 
-  push();
+  /*push();
   textSize(15);
   text('sin(x)',xStart+width/1.5,yStart-height/7);
   pop();
@@ -153,17 +153,17 @@ function labels(){
   push();
   textSize(15);
   text('cos(y)',xStart+width/3,yStart-height/4.5);
-  pop();
+  pop();*/
 
   push();
   textSize(15);
   text('1',xStart+width/4,yStart-height/2.5);
   pop();
 
-  push();
+  /*push();
   textSize(15);
   text('sin(y)',xStart+width/1.6,yStart-height/2);
-  pop();
+  pop();*/
 
 }
 
@@ -179,14 +179,15 @@ function constructions(xAngle,yAngle,xStart,yStart,Hypo){
   
 
 
-   if(p2.y <= yStart-Hypo*sin(xAngle)*cos(yAngle)-1){
+   if(p2.y < yStart-Hypo*sin(xAngle)*cos(yAngle)){
     p2.y= p2.y+deltaTime*0.5;
-  }
+  }else if(p2.y > yStart-Hypo*sin(xAngle)*cos(yAngle))
+          p2.y = yStart-Hypo*sin(xAngle)*cos(yAngle);
   
-   if(p4.x >= xStart+Hypo*cos(xAngle+yAngle)+1){
+   if(p4.x > xStart+Hypo*cos(xAngle+yAngle)+1){
     p4.x= p4.x-deltaTime*0.23;
-  }
-
+  }else if(p4.x < xStart+Hypo*cos(xAngle+yAngle)+1)
+         p4.x = xStart+Hypo*cos(xAngle+yAngle);
   
 
   line(p1.x, p1.y, p2.x, p2.y);
