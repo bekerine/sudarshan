@@ -44,7 +44,7 @@ function setup() {
   // Create buttons
  
   let subBut = createButton("Submit");
-  subBut.position(width/2,height);
+  subBut.position(width/2,height-30);
   subBut.mousePressed(veri);
 
   
