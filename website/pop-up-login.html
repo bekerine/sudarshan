@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Pop-up Login/Sign-up Form</title>
     <style>
-       /* Styles for the pop-up login/sign-up form */
-       .overlay {
+        /* Styles for the pop-up login/sign-up form */
+        .overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -60,24 +61,229 @@
             border-radius: 5px;
             cursor: pointer;
         }
-    
 
+        /* pop-up end */
+
+        /* form start */
+        @import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Kalam:wght@700&family=Roboto&family=Varela+Round&family=Ysabeau+SC&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        ::placeholder {
+            color: white;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+            color: white;
+        }
+
+        ::-ms-input-placeholder {
+            color: white;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            height: 100vh;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .login-div,
+        .signup-div {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            flex-direction: column;
+            background: linear-gradient(74deg, rgba(255, 63, 111, 1) 0%, rgba(255, 128, 111, 1) 100%);
+            transition: 0.3s all;
+        }
+
+        .signup-div {
+            left: -100%;
+        }
+
+        .login-div {
+            justify-content: center;
+            grid-gap: 20px;
+        }
+
+        .logo {
+            height: 150px;
+            width: 150px;
+            background: rgba(255, 255, 255, 0.2);
+            background-position: center;
+            background-size: cover;
+            background-image: url("");
+            border-radius: 20px;
+        }
+
+        .c-name {
+            color: white;
+            font-weight: 1000;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 500px;
+            padding: 20px;
+            grid-gap: 20px;
+        }
+
+        .login-div form {
+            height: 400px;
+        }
+
+        .box {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            grid-gap: 20px;
+            justify-content: center;
+            width: 90%;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+        }
+
+        .box input {
+            border: none;
+            outline: none;
+            height: 100%;
+            background: none;
+            width: 80%;
+            color: white;
+            font-weight: 1000;
+        }
+
+        .box i {
+            border-radius: 50%;
+            padding: 18px;
+            background: white;
+            color: rgba(255, 63, 111, 1);
+        }
+
+        .submit-btn {
+            width: 90%;
+            border: none;
+            font-weight: 1000;
+            text-transform: uppercase;
+            color: rgba(255, 63, 111, 1);
+            border-radius: 25px;
+            background: white;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .ex-text {
+            margin-top: 20px;
+            color: white;
+        }
+
+        .ex-text a {
+            color: white;
+            text-decoration: none;
+            font-weight: 1000;
+        }
+
+        .fp {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* form end */
     </style>
 </head>
+
 <body>
-    
+    <!-- pop-up start -->
     <div id="overlay" class="overlay">
         <div class="form-container">
             <span id="close-btn" class="close-btn">&times;</span>
-            <h2>Login/Sign-up</h2>
-            <form id="form">
-                <input type="text" class="form-input" placeholder="Username" required>
-                <input type="password" class="form-input" placeholder="Password" required>
-                <input type="submit" class="submit-btn" value="Log in">
-            </form>
+            <div class="container">
+                <!-- form start -->
+                <div class="login-div">
+                    <div class="logo"></div>
+                    <div class="c-name">Login</div>
+                    <form action="#">
+                        <div class="box">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <input type="submit" class="submit-btn" value="Login">
+                        <p class="ex-text"> Don't have an account? <a href="#" class="sub">Sign Up Now</a></p>
+                    </form>
+                    <a href="#" class="fp">Forgot Password? </a>
+                </div>
+
+
+                <div class="signup-div">
+                    <div class="logo"></div>
+                    <div class="c-name">Sign Up</div>
+                    <form action="#">
+                        <div class="box">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="box">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Usernane" required>
+                        </div>
+
+                        <div class="box">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" placeholder="Confirm Password" required>
+                        </div>
+                        <input type="submit" class="submit-btn" value="Sign Up">
+                        <p class="ex-text">Already have an account ? <a href="#" class="lb">Login</a></p>
+                    </form>
+                    <a href="#" class="fp">Contact For Support</a>
+                </div>
+            </div>
+            <!-- form end -->
         </div>
     </div>
-
+    <!-- pop-up end-->
     <script>
         // Get the overlay and close button elements
         var overlay = document.getElementById('overlay');
@@ -98,7 +304,8 @@
 
         // Add event listener to close the form when close button is clicked
         closeBtn.addEventListener('click', hideForm);
-    
+
     </script>
 </body>
+
 </html>
