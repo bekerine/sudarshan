@@ -175,3 +175,38 @@ footer a:hover {
 }
 
 /* dropdown end */
+
+/* page part 1 */
+@media screen and (min-width: 600px) {
+
+    .container-text {
+  display: flex;
+  align-items: center;
+}
+
+.image-section {
+  flex: 1;
+  /* width: 5px; */
+}
+
+.text-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-section h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.text-section p {
+  font-size: 16px;
+  color: #555;
+}
+
+}
+
+.container-text {
+  width: 90%;
+}
+
+/* page part 2 */
