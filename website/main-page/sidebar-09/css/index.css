@@ -181,8 +181,16 @@ footer a:hover {
   margin-left:auto;
   margin-right:auto;
   height:200px;
-  margin-bottom:5rem;
+  margin-bottom: 5rem;
 }
+
+@media screen and (max-width: 600px) {
+.box1{
+margin-bottom:50rem;
+}
+}
+
+
 @media screen and (min-width: 600px) {
 .coding1{
   background: url("https://bekerine.github.io/Start-ups/website/main-page/sidebar-09/images/1st-img.jpg");
