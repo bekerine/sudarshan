@@ -58,7 +58,7 @@ function draw() {
   rect(width/6,height/15,4*width/6,2*height/10);
   pop();
   
-  refereceCircles();
+  //refereceCircles();
   sides();
 
 }
