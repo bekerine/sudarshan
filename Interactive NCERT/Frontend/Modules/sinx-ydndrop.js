@@ -260,7 +260,7 @@ function magDist(){
       initialPoints[0][1]=magneticPoints[shortIndex][1];
     }
     else{
-      initialPoints[0][0]=3.5*width/10;
+      initialPoints[0][0]=7*width/10;
       initialPoints[0][1]=3*height/15;
     }
 
