@@ -37,7 +37,11 @@ body {
 }
 
 .topnav .search-container {
-  float: right;
+  float: left;
+}
+
+.info{
+  margin-left: 22rem;
 }
 
 .topnav input[type=text] {
@@ -51,7 +55,6 @@ body {
   float: right;
   padding: 6px 10px;
   margin-top: 8px;
-  margin-right: 16px;
   background: #ddd;
   font-size: 17px;
   border: none;
@@ -91,8 +94,8 @@ body {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  float: right;
+  margin-right: 6rem;
 }
 
 .dropdown-content {
@@ -134,9 +137,11 @@ section {
 
 <div class="topnav">
   <a class="active" href="#home">Home</a>
+  <div class="info">
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
   <a href="#subject">Subject</a>
+  </div>
   <div class="search-container">
     <form action="/action_page.php">
       <input type="text" placeholder="Search.." name="search">
@@ -145,12 +150,12 @@ section {
   </div>
 
   <div class="dropdown">
-    <button class="dropbtn"><section></section><section></section><section></section></button>
-    <div class="dropdown-content">
-    <a href="#">log in</a>
-    <a href="#">Sign in</a>
+      <button class="dropbtn"><section></section><section></section><section></section></button>
+      <div class="dropdown-content">
+      <a href="#">log in</a>
+      <a href="#">Sign in</a>
+      </div>
     </div>
-  </div>
   
 </div>
 
