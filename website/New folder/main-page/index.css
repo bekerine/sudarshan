@@ -132,10 +132,18 @@
   
   /* page part 2 */
   
-  .slider1{
-    width: 100%;
-    height: 15rem;
-    margin-top: 4rem;
-    margin-bottom: 5rem;
-  }
+  .slider img{
+    width: 200px;
+    margin: 2.5rem 3rem 3rem 2.5rem;
+}
+
+.slider{
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+}
+
+.courses{
+  width: 100%;
+}
     
