@@ -75,7 +75,7 @@
   }
 
   .coding1{
-    background: url("https://bekerine.github.io/Start-ups/website/main-page/sidebar-09/images/1st-img.jpg");
+    background: url("images/1st-img.jpg");
     width:170px;
     height:170px;
     object-fit:cover;
@@ -84,7 +84,7 @@
   }
   
     .coding2{
-      background: url("https://bekerine.github.io/Start-ups/website/main-page/sidebar-09/images/1st-img.jpg");
+      background: url("images/ncert.jpg");
       width:170px;
       height:170px;
       object-fit:cover;
@@ -93,7 +93,7 @@
     }
 
     .coding3{
-      background: url("https://bekerine.github.io/Start-ups/website/main-page/sidebar-09/images/1st-img.jpg");
+      background: url("images/puzzle.jpg");
       width:170px;
       height:170px;
       object-fit:cover;
@@ -102,16 +102,16 @@
     }
 
     .coding4{
-      background: url("https://bekerine.github.io/Start-ups/website/main-page/sidebar-09/images/1st-img.jpg");
+      background: url("images/expert.jpg");
       width:170px;
       height:170px;
       object-fit:cover;
       background-size:cover;
-      float:right;
+      float:left;
     }
 
     .coding5{
-      background: url("https://bekerine.github.io/Start-ups/website/main-page/sidebar-09/images/1st-img.jpg");
+      background: url("images/experience.jpg");
       width:170px;
       height:170px;
       object-fit:cover;
