@@ -3,7 +3,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background("#42ccf6");
 
   doubleTriangles(25,30,1.5*width/3,9*height/10,350);
 
