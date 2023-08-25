@@ -21,6 +21,12 @@ You can play with the "Construct" and "Deconstruct" buttons to see how this cons
 
 	Once we've built the entire figure, the next step is to figure out the angles inside the triangles. Drag and drop the angles where they fit and then hit submit.
 
+
+
+
+
+
+
 // Figuring Out the Sides
 
 When we know the angles, we just have to find out how long the sides are. 
