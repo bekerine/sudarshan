@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background('#00ffff');
 
    //Double Triangles.
 
