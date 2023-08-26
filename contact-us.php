@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact us - ncertdudes</title>
     <link rel="stylesheet" href="contact-us.css">
+    <link rel="stylesheet" href="navbar.css">
     <style>
         iframe {
             width: 100%;
@@ -14,9 +15,26 @@
     </style>
 </head>
 <body>
+  
+  
+<?php
+include '_partials/navbar.php';
 
 
-<iframe src="iframe/navbar.html" frameborder="0"></iframe>
+$errors = array("Message has been sent!", "Message could not be sent!");
+
+if (isset($_GET['case'])) {
+    $case = $_GET['case'];
+    if (in_array($case, $errors)) {
+        echo '<div class="alert" style="padding: 15px; background-color: #e7b0ac; color: white; font-size: 18px; text-align: center;">
+            <span style="margin-left: 15px; color: white; font-weight: bold; float: right; font-size: 22px; line-height: 20px; cursor: pointer; transition: 0.3s;" onclick="closeAlert()">&times;</span> 
+            ' . $case . '</div>';
+    } else {
+        header("location: contact-us.php"); 
+        exit(); 
+    }
+}
+?>
 
 
     <div class="background">
@@ -82,6 +100,20 @@
       </div>
 
 <iframe src="iframe/footer.html" frameborder="0"></iframe>
+<script>
+  function closeAlert() {
+    var alert = document.querySelector(".alert");
+    alert.style.opacity = "0"; 
+    setTimeout(function() {
+      alert.style.display = "none"; 
+    }, 1000); 
+  }
+  
+  
+  setTimeout(function() {
+    closeAlert();
+  }, 3000);
+  </script>
 
 </body>
 </html>
