@@ -4,9 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>NCERTdudes - an online platform for interactive ncert </title>
   <link rel="stylesheet" href="main-page.css">
   <link rel="stylesheet" href="iframe/index.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
     body {
       margin: 0;
@@ -28,23 +31,11 @@
 <body>
 
 
-  <iframe src="iframe/navbar.html" frameborder="0"></iframe>
+<?php
 
+include '_partials/navbar.php';
+?>
 
-  <!-- form part start -->
-  <!-- Your webpage content goes here -->
-
-  <!-- Pop-up container -->
-  <div class="popup-container" id="popup">
-    <div class="popup-box">
-      <!-- Close button -->
-      <a href="#" class="close-button" onclick="closePopup()">&#10006;</a>
-      <h2></h2>
-      <!-- Add your form elements here -->
-      <iframe src="iframe/form.html" frameborder="0" class="form"></iframe>
-    </div>
-  </div>
-  <!-- form part end -->
 
 
   <main>

@@ -15,7 +15,7 @@ body{
 }
 .main{
 	width: 350px;
-	height: 550px;
+	height: 600px;
 	background: red;
 	overflow: hidden;
 	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
@@ -35,7 +35,7 @@ label{
 	font-size: 2.3em;
 	justify-content: center;
 	display: flex;
-	margin: 60px;
+	margin: 35px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
@@ -108,13 +108,16 @@ a{
 </style>
 </head>
 <body>
+
+
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 
-			<div class="signup">
-				<form>
+			<div class="signup" method="post" action="../_controllers/processSignup.php">
+				<form class="signup" method="post" action="_controllers/processSignup.php">
 					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" name="txt" placeholder="User name" required="">
+					<input type="text" name="username" placeholder="User name" required="">
+					<input type="text" name="name" placeholder="name" required="">
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
 					<input type="password" name="cpswd" placeholder="Confirm Password" required="">
@@ -122,7 +125,7 @@ a{
 					<button>Sign up</button>
 				</form>
 			</div>
-
+<br><br><br>
 			<div class="login">
 				<form>
 					<label for="chk" aria-hidden="true">Login</label>
@@ -132,5 +135,6 @@ a{
 				</form>
 			</div>
 	</div>
+	
 </body>
 </html>
