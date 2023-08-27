@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="iframe/index.css">
-    <link rel="stylesheet" href="privacy-policy.css">
+    <link rel="stylesheet" href="css/privacy-policy.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
     <style>
         body {
             margin: 0;
@@ -27,8 +29,11 @@
 
 <body>
 
-    <iframe src="iframe/navbar.html" frameborder="0"></iframe>
+<?php
+include '_partials/navbar.php';
 
+
+?>
     <main>
         <h1 class="mb-4">Privacy Policy</h1>
         <h2>What information do we collect</h2>

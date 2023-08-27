@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="about-us.css">
+    <link rel="stylesheet" href="css/about-us.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="iframe/index.css">
     <style>
         body {
@@ -26,8 +27,10 @@
 </head>
 
 <body>
-    <iframe src="iframe/navbar.html" frameborder="0"></iframe>
-    <main>
+<?php
+include '_partials/navbar.php';
+?>
+<main>
         <div class="box1">
             <div class="TWI"></div>
             <h2>Lorem ipsum dolor sit amet.</h2>

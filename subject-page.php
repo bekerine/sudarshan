@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="subject-page.css">
+    <link rel="stylesheet" href="css/subject-page.css">
     <link rel="stylesheet" href="iframe/index.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
 
     <style>
         body {
@@ -29,8 +31,12 @@
 
 <body>
 
-    <iframe src="iframe/navbar.html" frameborder="0"></iframe>
 
+<?php
+include '_partials/navbar.php';
+
+
+?>
     <main>
 
 <!-- <div class="card1">
