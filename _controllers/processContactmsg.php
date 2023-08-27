@@ -141,6 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&
                     <p>Email: info@example.com</p>
                 </div>
             </div>
+            <center><i>powered by <b>@craftii</b></i></center>
         </div>
     </body>
     </html>
