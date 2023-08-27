@@ -1,6 +1,6 @@
 <?php
-require_once('../_middlewares/RoutingMiddleware.php');
-RoutingMiddleware::blockFileAccess($blockedPaths);
+// require_once('../_middlewares/RoutingMiddleware.php');
+// RoutingMiddleware::blockFileAccess($blockedPaths);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -29,18 +29,40 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&
 
     if ($mysqli->connect_error) {
         $contact_status = "could not connect with server!";
-        header("Location: ../contact-us.php?contact_status={$contact_status}");
-        die;
+        echo '<script>
+        setTimeout(function() {
+            window.location.href = "../contact-us.php?contact_status=' . $contact_status . '";
+        }, 1200); // 2000 milliseconds (2 seconds) timeout
+    </script>';
+            die;
     }
 
     $stmt = $mysqli->prepare("INSERT INTO contact_messages (name, email, contactmsg_id, contact_no, message) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $name, $email, $contactmsg_id, $contact_no, $contactmsg);
+    echo '<html>
+    <body>
+        <div style="    background-color: black;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }">
 
+        <img src="../images/loader.svg" width="50%">
+    
+    </div>
+    </body>
+    </html>';
     // Create a PHPMailer instance
 
     try {
-        // Enable debugging (remove in production)
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        
         
         // SMTP settings
         $mail->isSMTP();
@@ -60,7 +82,71 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&
         // Email content
         $mail->isHTML(true);
         $mail->Subject = "Message - ncertdudes by {$name}";
-        $mail->Body = "Message: {$contactmsg}\r\n | name: {$name}\r\n | Contact: {$_POST['contact_no']}\r\n | Email: {$email}";
+        $mail->Body = '
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            /* Add your CSS styles here */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+            .email-container {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #ffffff;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #888888;
+            }
+            .header {
+                background-color: #007BFF;
+                color: #ffffff;
+                padding: 20px;
+                text-align: center;
+            }
+            .content {
+                padding: 20px;
+            }
+            .message {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            .contact-info {
+                font-size: 14px;
+                margin-top: 20px;
+            }
+            .contact-info p {
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="email-container">
+            <div class="header">
+                <h1>Thank You for contacting us!</h1>
+                <h4>Please wait for our reply!</h4>
+            </div>
+            <div class="content">
+                <p class="message">Message: ' . $contactmsg . '</p>
+                <p class="message">Name: ' . $name . '</p>
+                <p class="message">Contact: ' . $_POST['contact_no'] . '</p>
+                <p class="message">Email: ' . $email . '</p>
+                <img src="cid:logo" alt="Company Logo">
+                <div class="contact-info">
+                    <p>Contact Information:</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <p>Email: info@example.com</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+';
+    
+        $mail->AddEmbeddedImage("../images/logo.jpg", 'logo');
 
         $emailSent = $mail->send();
         $databaseInsert = $stmt->execute();
@@ -81,14 +167,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&
         // Close the database connection
         $stmt->close();
         $mysqli->close();
-        
+         
         // Redirect with a success or error message
-        header("Location: ../contact-us.php?contact_status={$contact_status}");
-        die;
+        echo '<script>
+        setTimeout(function() {
+            window.location.href = "../contact-us.php?contact_status=' . $contact_status . '";
+        }, 1200); // 2000 milliseconds (2 seconds) timeout
+    </script>';
+            die;
     } catch (Exception $e) {
         $contact_status = "Message could not be sent!";
-        header("Location: ../contact-us.php?contact_status={$contact_status}");
-        die;
+        echo '<script>
+        setTimeout(function() {
+            window.location.href = "../contact-us.php?contact_status=' . $contact_status . '";
+        }, 1200); // 2000 milliseconds (2 seconds) timeout
+    </script>';
+            die;
     }
 } else {
     header("location: ../contact-us.php");
