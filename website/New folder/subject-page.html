@@ -12,6 +12,7 @@
     body {
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     iframe {
@@ -29,24 +30,24 @@
 
 <body>
 
-  <div class="button">
-    <div class="btn">
-    <input type="radio" id="check1" class="checkbox" name="check" />
-    <label for="check1" class="label">Button 1</label>
-    <a href="#maths"><input type="radio" id="check2" class="checkbox" name="check" />
-    <label for="check2" class="label">Button 2</label></a>
-    <input type="radio" id="check3" class="checkbox" name="check" />
-    <label for="check3" class="label">Button 3</label>
-    <input type="radio" id="check4" class="checkbox" name="check" />
-    <label for="check4" class="label">Button 4</label>
-    <input type="radio" id="check5" class="checkbox" name="check" />
-    <label for="check5" class="label">Button 5</label>
-    </div>
-  </div>
+ 
 
   <iframe src="iframe/navbar.html" frameborder="0"></iframe>
 
-  
+  <div class="button">
+    <div class="btn">
+    <input type="radio" id="check1" class="checkbox" name="check" />
+    <label for="check1" class="label"><a href="#ek1">Physics</a></label>
+    <a href="#maths"><input type="radio" id="check2" class="checkbox" name="check" />
+    <label for="check2" class="label"><a href="#chemistry">Chemistry</a></label></a>
+    <input type="radio" id="check3" class="checkbox" name="check" />
+    <label for="check3" class="label"><a href="#ek2">Biology</a></label>
+    <input type="radio" id="check4" class="checkbox" name="check" />
+    <label for="check4" class="label"><a href="#maths">Maths</a></label>
+    <input type="radio" id="check5" class="checkbox" name="check" />
+    <label for="check5" class="label"><a href="#ek2">Biology</a></label>
+    </div>
+  </div>
 
   <main>
 
@@ -99,7 +100,7 @@
     <!-- page start -->
 
 
-    <h1>Physics</h1>
+    <h1 id="ek1">Physics</h1>
     <div class="cards">
 
       <div class="card">
@@ -211,7 +212,7 @@
     </div>
 
 
-    <h1>Biology</h1>
+    <h1 id="ek2">Biology</h1>
     <div class="cards">
 
       <div class="card">
@@ -319,6 +320,8 @@
         </div>
       </div>
 
+
+      
 
     </div>
 
