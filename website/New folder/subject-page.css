@@ -113,10 +113,11 @@ h1{
 }
 
 /* CSS code to change the background color when the label is active */
-.checkbox:checked + .label {
-  background-color: aqua; /* added this to change the background color */
-  /*transition: background-color 3s; /* added this to make the color change smooth */
-}
+/* .checkbox:checked + .label:hover {
+background-color: aqua; */
+  /* background-color: aqua; */
+  /*transition: background-color 3s;*/ /* added this to make the color change smooth */
+/* } */
 
 .button{
 
@@ -126,6 +127,11 @@ h1{
 
 .btn{
   margin-left: 30%;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 /* button */
