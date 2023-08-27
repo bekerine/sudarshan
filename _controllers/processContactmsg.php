@@ -28,7 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&
     $mysqli = new mysqli("localhost", "root", "root123", "ncertdudes");
 
     if ($mysqli->connect_error) {
-        die("Connection failed: " . $mysqli->connect_error);
+        $contact_status = "could not connect with server!";
+        header("Location: ../contact-us.php?contact_status={$contact_status}");
+        die;
     }
 
     $stmt = $mysqli->prepare("INSERT INTO contact_messages (name, email, contactmsg_id, contact_no, message) VALUES (?, ?, ?, ?, ?)");
@@ -58,23 +60,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&
         // Email content
         $mail->isHTML(true);
         $mail->Subject = "Message - ncertdudes by {$name}";
-        $mail->Body = "<img src='cid:logo'><br>{$contactmsg}";
+        $mail->Body = "Message: {$contactmsg}\r\n | name: {$name}\r\n | Contact: {$_POST['contact_no']}\r\n | Email: {$email}";
 
-        // Add an embedded image
-        $mail->addEmbeddedImage("../images/logo.jpg", "logo");
-
-        // Send the email
-        if ($mail->send()) {
-            $case = "Message has been sent!";
+        $emailSent = $mail->send();
+        $databaseInsert = $stmt->execute();
+        if ($emailSent && $databaseInsert) {
+            // Both email sent and stored in the database
+            $contact_status = "Message has been sent and stored!";
+        } elseif ($emailSent) {
+            // Email sent but not stored in the database
+            $contact_status = "Message sent but could not be stored in the server!";
+        } elseif ($databaseInsert) {
+            // Email not sent but stored in the database
+            $contact_status = "Message could not be sent, but it has been stored!";
         } else {
-            $case = "Message could not be sent!";
-        }
-
-        // Execute the database insert
-        if ($stmt->execute()) {
-            $case = "Message has been sent!";
-        } else {
-            $case = "Message could not be sent!";
+            // Neither email sent nor stored in the database
+            $contact_status = "Message could not be sent or stored in the database!";
         }
 
         // Close the database connection
@@ -82,12 +83,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" &&
         $mysqli->close();
         
         // Redirect with a success or error message
-        header("Location: ../contact-us.php?case={$case}");
+        header("Location: ../contact-us.php?contact_status={$contact_status}");
+        die;
     } catch (Exception $e) {
-        $case = "Message could not be sent: " . $mail->ErrorInfo;
-        header("Location: ../contact-us.php?case={$case}");
+        $contact_status = "Message could not be sent!";
+        header("Location: ../contact-us.php?contact_status={$contact_status}");
+        die;
     }
 } else {
-    header("location: ../contact-us.html");
+    header("location: ../contact-us.php");
 }
 ?>

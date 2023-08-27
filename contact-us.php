@@ -21,10 +21,10 @@
 include '_partials/navbar.php';
 
 
-$errors = array("Message has been sent!", "Message could not be sent!");
+$errors = array("could not connect with server!", "Message has been sent and stored!", "Message sent but could not be stored in the server!", "Message could not be sent, but it has been stored!", "Message could not be sent or stored in the database!", "Message could not be sent!");
 
-if (isset($_GET['case'])) {
-    $case = $_GET['case'];
+if (isset($_GET['contact_status'])) {
+    $case = $_GET['contact_status'];
     if (in_array($case, $errors)) {
         echo '<div class="alert" style="padding: 15px; background-color: #e7b0ac; color: white; font-size: 18px; text-align: center;">
             <span style="margin-left: 15px; color: white; font-weight: bold; float: right; font-size: 22px; line-height: 20px; cursor: pointer; transition: 0.3s;" onclick="closeAlert()">&times;</span> 
