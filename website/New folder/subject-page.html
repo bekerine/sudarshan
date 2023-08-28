@@ -34,22 +34,28 @@
 
   <iframe src="iframe/navbar.html" frameborder="0"></iframe>
 
+  <div id="navbar">
+
   <div class="button">
     <div class="btn">
     <input type="radio" id="check1" class="checkbox" name="check" />
-    <label for="check1" class="label"><a href="#ek1">Physics</a></label>
+    <label for="check1" class="label"><a href="#physics">Physics</a></label>
     <input type="radio" id="check2" class="checkbox" name="check" />
     <label for="check2" class="label"><a href="#chemistry">Chemistry</a></label>
     <input type="radio" id="check3" class="checkbox" name="check" />
-    <label for="check3" class="label"><a href="#ek2">Biology</a></label>
+    <label for="check3" class="label"><a href="#biology">Biology</a></label>
     <input type="radio" id="check4" class="checkbox" name="check" />
     <label for="check4" class="label"><a href="#maths">Maths</a></label>
-    <input type="radio" id="check5" class="checkbox" name="check" />
-    <label for="check5" class="label"><a href="#ek2">Biology</a></label>
+    <!-- <input type="radio" id="check5" class="checkbox" name="check" />
+    <label for="check5" class="label"><a href="#ek2">Biology</a></label> -->
     </div>
   </div>
 
+  </div>
+
   <main>
+
+    <div class="content">
 
     <!-- don't touch it -->
     <!-- <div class="card1">
@@ -100,7 +106,7 @@
     <!-- page start -->
 
 
-    <h1 id="ek1">Physics</h1>
+    <h1 id="physics">Physics</h1>
     <div class="cards">
 
       <div class="card">
@@ -212,7 +218,7 @@
     </div>
 
 
-    <h1 id="ek2">Biology</h1>
+    <h1 id="biology">Biology</h1>
     <div class="cards">
 
       <div class="card">
@@ -328,11 +334,13 @@
 
     <!-- page end -->
 
+    </div>
+
   </main>
 
   <iframe src="iframe/footer.html" frameborder="0"></iframe>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <a href="#"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button></a>
 
   <script src="iframe/index.js"></script>
 

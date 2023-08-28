@@ -31,3 +31,16 @@ function topFunction() {
     // Call the showPopup function after 5 seconds
     setTimeout(showPopup, 5000); // 5000 milliseconds (5 seconds)
 // 5s pop-up bend
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}

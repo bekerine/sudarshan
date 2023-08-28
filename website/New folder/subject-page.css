@@ -65,7 +65,7 @@
 }
 
 h1{
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 /* button */
@@ -113,16 +113,15 @@ h1{
 }
 
 /* CSS code to change the background color when the label is active */
-/* .checkbox:checked + .label:hover {
-background-color: aqua; */
-  /* background-color: aqua; */
+.checkbox:checked + .label:hover {
+  background-color: aqua;
   /*transition: background-color 3s;*/ /* added this to make the color change smooth */
-/* } */
+}
 
 .button{
-
-  background-color: black;
   width: 100%;
+  background-color: aquamarine;
+  padding: 16PX;
 }
 
 .btn{
@@ -137,3 +136,18 @@ a{
 /* button */
 
   /* card end */
+
+  
+  #navbar {
+    overflow: hidden;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
