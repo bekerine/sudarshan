@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiple Choice Quiz</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding:0;
+  background-color: #D4C5EB;
+  color: black;
+}
+
+img{
+  margin-left:10%;
+  margin-right:10%;
+  margin-top:3%;
+  margin-bottom: 5%;
+  width:30%;
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width:400px;
+  }
+}
+
+#quiz-container {
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+#result {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+/*input{
+    width:20px;
+    height:20px;
+}*/
+
+.option {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+
+
+
+
+
+
+button{
+color:white;
+font-size:1.4rem;
+    background:red;
+    position:relative;
+    padding:15px 25px;
+    box-shadow:-6px 6px 0 #b62a2a;
+    outline:none;
+    border:none;
+    font-family:italic;
+}
+button:hover{
+    background:red;
+}
+button:active{
+    background:red;
+    top:3px;
+    left:-3px;
+    box-shadow:-3px 3px 0 red;
+}
+button::before{
+    position:absolute;
+    display:block;
+    content:"";
+    height:0;
+    width:0;
+    border:solid 6px transparent;
+    border-right:solid 6px red;
+    border-left-width:0;
+    top:0;
+    left:-6px;
+}
+button::after{
+    position:absolute;
+    display:block;
+    content:"";
+    height:0;
+    width:0;
+    border:solid 6px transparent;
+    border-top: solid 6px red;
+    border-bottom-width:0;
+    right:0;
+    bottom:-6px;
+}
+button:active::before{
+    border:solid 3px transparent;
+    border-right:solid 3px red;
+    border-left-width:0;
+    left:-3px;
+}
+button:active::after{
+    border:solid 3px transparent;
+    border-top:solid 3px red;
+    border-bottom-width:0;
+    bottom:-3px;
+}
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <h2>Question 1:</h2>
+    <p>Find the length of the opposite side and the adjacent side of the triangle?</p>
+      <img src="index-img.jpg"><br>
+    <label class="option">
+    <input type="checkbox" name="answer" value="mercury" onclick="updateCheckboxes('mercury')"> Adjacent side: √3/2 and opposite side: 1/2
+  </label>
+  <label class="option">
+    <input type="checkbox" name="answer" value="venus" onclick="updateCheckboxes('venus')"> Adjacent side: 3/2 and opposite side: √1/2
+  </label>
+  <label class="option">
+    <input type="checkbox" name="answer" value="earth" onclick="updateCheckboxes('earth')"> Adjacent side: 3/2 and opposite side: √3/2
+  </label>
+  <label class="option">
+    <input type="checkbox" name="answer" value="jupiter" onclick="updateCheckboxes('jupiter')"> Adjacent side: 1/2 and opposite side: 3/2
+  </label>
+</div>
+<button onclick="checkAnswer()">Submit</button>
+
+
+  <script src="script.js"></script>
+  <script>
+const correctAnswer = "mercury"; // Set the correct answer value here
+
+function updateCheckboxes(selectedValue) {
+  const checkboxes = document.querySelectorAll('input[name="answer"]');
+  checkboxes.forEach(checkbox => {
+    if (checkbox.value !== selectedValue) {
+      checkbox.checked = false;
+    }
+  });
+}
+
+function checkAnswer() {
+  const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+  if (selectedAnswer) {
+    if (selectedAnswer.value === correctAnswer) {
+      alert("Correct answer!");
+    } else {
+      alert("Wrong answer. Try again.");
+      
+// Display the alert
+alert("want to get explanation for the correct answer than click OK if not click anwhere on the screen and try again");
+
+// Redirect the user after they dismiss the alert
+window.location.href = "https://www.example.com/otherpage";
+
+
+    }
+  } else {
+    alert("Please select an answer.");
+  }
+}
+</script>
+  
+</body>
+</html>
