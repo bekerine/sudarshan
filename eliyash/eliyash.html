@@ -16,8 +16,14 @@ body{
   justify-content: space-between;
 }
 
-img {
+@media screen and (max-width: 480px) {
+    img {
   width: 99%;
+}
+}
+
+img{
+    width: 50%;
 }
 
 .paragraph {
@@ -161,7 +167,10 @@ iframe{
 
 <div class="container">
   <div class="image">
-    <img src="A.png" alt="Image">
+    <figure>
+        <img src="A.png" alt="hero">
+        <figcaption>Luck on the line.</figcaption>
+      </figure>
   </div>
   <div class="paragraph">
     <p>Luck on the line</p>
@@ -178,5 +187,6 @@ iframe{
 
   </div>
 </div>
+
 </body>
 </html>
