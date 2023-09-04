@@ -159,12 +159,24 @@ iframe{
     height: 6rem;
 }
 
+main{
+    margin: 1rem;
+}
+
+.counter {
+    font-size: 40px;
+    color: blue;
+    width: 40%;
+    /* box-shadow: 0 8px 16px 0 white; */
+  }
+
 </style>
 </head>
 <body>
 
 <iframe src="8.html" frameborder="0"></iframe>
 
+<main>
 <div class="container">
   <div class="image">
     <figure>
@@ -173,7 +185,7 @@ iframe{
       </figure>
   </div>
   <div class="paragraph">
-    <p>Luck on the line</p>
+    <!-- <p>Luck on the line</p> -->
 
     <div class="gb">
     <a href="#">
@@ -188,5 +200,25 @@ iframe{
   </div>
 </div>
 
+<p>Our Users</p>
+<div class="counter" id="counter">0</div>
+
+<h3>About Us</h3>
+</main>
+
+<iframe src="footer.html" frameborder="0"></iframe>
+
+
+<script>
+    var count = 0; // initialize the counter
+    function increment() {
+      count++; // increase the counter by one
+      document.getElementById("counter").innerHTML = count; // update the HTML element
+      if (count == 100) { // stop the counter when it reaches 100
+        clearInterval(timer); // clear the interval
+      }
+    }
+    var timer = setInterval(increment, 10); // call the increment function every second
+  </script>
 </body>
 </html>
