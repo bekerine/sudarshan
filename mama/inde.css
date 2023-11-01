@@ -20,9 +20,15 @@ body {margin:0;font-family:Arial;padding:0%;overflow-x: hidden;}
 .topnav {
   overflow: hidden;
   background-color: #709F9D;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .topnav {
+    position: fixed;
+  }
 }
 
 .topnav a {
