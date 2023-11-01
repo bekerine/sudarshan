@@ -32,7 +32,7 @@
     <p>We're a team of</p>
     <h1>  <span> </span></h1> 
     <p>creating cutting edge visual content for the evolving digital space</p>
-
+</div>
     <!-- slider start -->
 
     <div class="slide1">
@@ -80,9 +80,116 @@
 
     <!-- slider end -->
     </div>
+
+<!-- part2 start -->
+
+<div class="b">
+
+  <div class="row1-container">
+
+    <div class="box red">
+      <h2>BRANDED CONTENT</h2>
+      <p>Building brands with a steady dose of engaging digital content!</p>
+      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+    </div>
+
+    <div class="box red">
+      <h2>DIGITAL GROWTH</h2>
+      <p>Enable your brand to grow through integrated marketing channels in an evolving digital landscape.</p>
+      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+    </div>
+
+    <div class="box red">
+      <h2>DIGITAL GROWTH</h2>
+      <p>Enable your brand to grow through integrated marketing channels in an evolving digital landscape.</p>
+      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+    </div>
+
+  </div>
+
+<!-- video gallary start -->
+
+<h3>OUR WORK</h3>
+
+<div class="video1">
+
+<div class="container">
+  <div class="main-video">
+      <video src="videos/video1.mp4" muted controls autoplay></video>
+  </div>
+
+  <div class="videos">
+    <video class="active" src="videos/video1.mp4" muted></video>
+    <video src="videos/video2.mp4" muted></video>
+    <video src="videos/video3.mp4" muted></video>
+    <video src="videos/video4.mp4" muted></video>
+    <!-- <button>MORE</button> -->
 </div>
 
+</div>
+
+</div>
+</div>
+
+<!-- video gallary end -->
+
+<!-- logo slider start -->
+
+<h3>CLINTS</h3>
+
+<div class="logo-slider">
+
+  <section class="sliders-a">
+    <div class="slider-a">
+        <div class="slide-track-a">
+            <div class="slide-a">
+              
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+                <img src="https://i.ibb.co/4SdC2TP/slider1.jpg" alt="">
+              
+            </div>
+        </div>
+    </div>
+    </section>
+
+</div>
+
+<!-- logo slider end -->
+
+</div>
+
+<!-- our team start-->
+
+<h3>OUR TEAM</h3>
+
+<!-- our team end -->
+
+<!-- part2 end -->
+
 </main>
+
+<!-- footer start -->
+  <footer>
+    <hr>
+    <p>&copy; 2023 . All rights reserved. | Talent Skool</p>
+</footer>
+<!-- footer end -->
 
 <script>
 function myFunction() {
@@ -109,6 +216,27 @@ function myFunction() {
     </script>
 
 <!-- slider end -->
+
+<!-- video gallary start -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('.videos video').click(function(){
+
+                $(this).addClass('active').siblings().removeClass('active');
+
+                var src = $(this).attr('src');
+                $('.main-video video').attr('src',src);
+            });
+        });
+
+    </script>
+
+<!-- video gallary end -->
 
 </body>
 </html>

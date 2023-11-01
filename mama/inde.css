@@ -1,3 +1,20 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
+h3{
+  text-align: center;
+}
+
 body {margin:0;font-family:Arial;padding:0%;overflow-x: hidden;}
 
 .topnav {
@@ -5,6 +22,7 @@ body {margin:0;font-family:Arial;padding:0%;overflow-x: hidden;}
   background-color: #709F9D;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .topnav a {
@@ -268,3 +286,226 @@ span::before {
 }
 
   /* slider end */
+
+  /* part2 start */
+
+  @media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.box p {
+    color: var(--grayishBlue);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;  
+}
+
+img {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.red {
+    border-top: 3px solid var(--red);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box {
+        width: 20%;
+     
+    }
+}
+
+
+/* video gallary start */
+
+ .video1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.container{
+  width: 90%;
+  display: grid;
+  background: rgb(238, 236, 236);
+  z-index: 0;
+}
+
+.container .videos{
+  width: 20%;
+  padding: 10px 0 10px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container .videos video{
+  width: 90%;
+  margin: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.container .videos video:nth-child(1){
+  margin-top: 0;
+}
+
+.container .videos video:hover,
+.container .videos .active{
+  transform: scale(1.06);
+  border: 3px solid blue;
+}
+
+.container .main-video{
+  width: 90%;
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin-left: 2rem;
+}
+
+.container .main-video video{
+  width: 90%;
+  object-fit: cover;
+  border: 3px solid blue;
+}
+
+button{
+  width: 100%;
+  height: 20%;
+  margin: 25%;
+  border-radius: 2rem;
+  background-color: #40D3DC;
+  font-weight: bolder;
+}
+
+/* video gallary end */
+
+/* logo slider start */
+
+.logo-slider{
+  overflow: hidden;
+}
+
+.sliders-a{
+  /* min-height: 100vh; */
+  display: grid;
+  place-items: center;
+}
+
+.slide-a{
+  height: 250px;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+}
+
+.slide-a{
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.slide-track-a{
+  display: flex;
+  /* width: calc(250px*18); */
+  animation: scroll 40s linear infinite;
+}
+
+.slide-a img{
+  width: 100%;
+  padding-right: 10px;
+}
+
+@keyframes scroll{
+0% {
+  transform: translateX(0);
+}
+100% {
+  transform: translateX(calc(-250px*9));
+}
+}
+
+/* logo slider end */
+
+  /* part2 end */
+
+  /* footer  start*/
+
+  hr {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Optional styling to make the footer more visually appealing */
+footer {
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  /* footer end */
