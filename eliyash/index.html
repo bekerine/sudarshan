@@ -3,7 +3,10 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial;}
+body {
+  font-family: Arial;
+  margin: 2rem;
+}
 
 /* Style the tab */
 .tab {
@@ -41,27 +44,73 @@ body {font-family: Arial;}
   border: 1px solid #ccc;
   border-top: none;
 }
+
+#last{
+  display: none;
+}
+
+
+
+.button {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #4CAF50; /* Green border */
+  color: #4CAF50; /* Green text */
+  padding: 10px 24px; /* Some padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s; /* 0.4 second transition */
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green background on mouse-over */
+  color: white; /* White text on mouse-over */
+}
+
+
+img{
+  width: 100%;
+}
 </style>
 </head>
 <body>
 
-<h2>Tabs</h2>
-<p>Click on the buttons inside the tabbed menu:</p>
+<h1>Guide How To Do Payment</h1>
+
+<p>go down this page</p>
+<img src="a.png" alt="" srcset="">
+
+<p>choose between premiun and normal plan</p>
+<img src="b.png" alt="" srcset="">
+
+<p>press proceed to pay button</p>
+<img src="c.png" alt="" srcset="">
+
+<p>complete the payment process</p>
+
+<p>fill the form</p>
+
+<p>WOW! now you're in our team now</p>
+
+
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'London')">Premium</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Normal</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')" id="last">Tokyo</button>
 </div>
 
 <div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+  <h3>Take our premium plan</h3>
+  <a href="https://lifegod20.github.io/lottery777/lottery-final/form1.html" target="_blank"><button class="button">Proceed to Pay</button></a>
 </div>
 
 <div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <h3>Take our normal plan</h3>
+  <a href="https://lifegod20.github.io/lottery777/lottery-final/form1.html" target="_blank"><button class="button">Proceed to Pay</button></a>
 </div>
 
 <div id="Tokyo" class="tabcontent">
