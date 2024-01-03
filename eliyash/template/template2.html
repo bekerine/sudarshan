@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .part1 {
+            background-color: black;
+            padding: 1rem;
+        }
+
+        .img {
+            width: 5rem;
+            height: 5rem;
+            margin-left: 45%;
+            margin-top: -1.5rem
+        }
+
+        .part1 h1 {
+            color: white;
+            text-align: center;
+        }
+
+        .part2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .part2 img {
+            width: 5rem;
+        }
+
+        .part2 span {
+            margin-left: -37rem;
+        }
+
+        .part3 {
+            text-align: center;
+        }
+
+        .part4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 3rem;
+        }
+
+        @media only screen and (max-width: 730px) {
+            .part4 {
+                display: block;
+                /* align-items: center;
+                justify-content: space-between; */
+                /* margin: 3rem; */
+            }
+        }
+
+        /* .part4 .contact {
+            display: flex;
+        } */
+
+        .part4 .contact img {
+            width: 2.5rem;
+            margin: 1rem;
+        }
+
+        @media only screen and (max-width: 730px) {
+            .part4 .contact img {
+                margin: 1rem;
+            }
+        }
+
+        @media only screen and (max-width: 730px) {
+            .part4 .location iframe {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <div class="part1">
+            <h1>Shop Name</h1>
+            
+        </div>
+
+<img src="logo.png" alt="" srcset="" class="img">
+
+        <div class="part2">
+            <img src="youtube.svg" alt="" srcset="">
+            <!-- <span>youtube</span> -->
+            <img src="instagram.svg" alt="" srcset="">
+            <!-- <span>instagram</span> -->
+        </div>
+
+        <div class="part3">
+            <h2>photo/video galarry</h2>
+            <a href="galary/galary.html"><button>choose from list➡️</button></a>
+        </div>
+
+        <div class="part4">
+            <div class="contact">
+                <h3>contact</h3>
+                <a href="tel:6031112298p000"><img src="phone.svg" alt="" srcset=""></a>
+                <br>
+                <a href="https://api.whatsapp.com/send?phone=15551234567"><img src="whatsapp.svg" alt="" srcset=""></a>
+            </div>
+
+            <div class="location">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d224455.56959423167!2d77.32714658326088!3d28.47598451678432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sworld%20map!5e0!3m2!1sen!2sin!4v1704303392406!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <footer>
+            <a href="#">contact for your own website</a>
+            <br>
+            <br>
+            <span>&#169; the craftii</span>
+        </footer>
+
+    </main>
+</body>
+
+</html>

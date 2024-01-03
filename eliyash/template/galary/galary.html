@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Drawing</title>
+    <style>
+        body {
+
+            margin: 0;
+
+            font-family: "Lato", sans-serif;
+
+        }
+
+        #top {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            right: 30px;
+
+            z-index: 90;
+
+            font-size: 18px;
+
+            border: none;
+
+            outline: none;
+
+            background-color: red;
+
+            color: white;
+
+            cursor: pointer;
+
+            padding: 15px;
+
+            border-radius: 4px;
+
+        }
+
+
+
+        #top:hover {
+
+            background-color: #555;
+
+        }
+
+        .card {
+
+            width: 99%;
+
+            border: 1px solid red;
+
+            border-radius: 5px;
+
+            display: inline-block;
+
+            margin-left: 5px;
+
+            margin-bottom: 10px;
+
+            margin-top: 20px;
+
+        }
+
+
+
+        @media only screen and (max-width: 600px) {
+
+            .card {
+
+                width: 95%;
+
+                border: 1px solid red;
+
+                border-radius: 5px;
+
+                display: inline-block;
+
+                margin-left: 10px;
+
+            }
+
+        }
+
+
+
+        .card iframe {
+
+            width: 90%;
+
+            height: 600px;
+
+            border-radius: 5px;
+
+            margin-left: 5%;
+
+            margin-top: 5%;
+
+        }
+
+
+
+        .card h2 {
+
+            font-size: 17px;
+
+            text-align: center;
+
+        }
+
+        h1 {
+
+            text-align: center;
+
+        }
+
+
+
+        a {
+
+            text-decoration: none;
+
+            color: white;
+
+        }
+
+        input[type="checkbox"] {
+            height: 20px;
+            width: 20px;
+            margin-top: 10px;
+        }
+
+        #myBtn {
+            position: fixed;
+
+            bottom: 20px;
+
+            left: 40%;
+
+            z-index: 90;
+
+            font-size: 18px;
+
+            border: none;
+
+            outline: none;
+
+            background-color: red;
+
+            color: white;
+
+            cursor: pointer;
+
+            padding: 15px;
+
+            border-radius: 4px;
+        }
+
+        #myBtn {
+            height: 50px;
+            width: 100px;
+            background: blue;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-size: 18px;
+            animation: colour 5s ease-in infinite;
+        }
+
+        @keyframes colour {
+            0% {
+                background: #000;
+                color: #fff;
+            }
+
+            25% {
+                background: red;
+                color: #00f;
+            }
+
+            50% {
+                background: #0ff;
+                color: #000;
+            }
+
+            75% {
+                background: purple;
+                color: #eee;
+            }
+
+            100% {
+                background: violet;
+                color: #fff;
+            }
+        }
+
+        .fname {
+            display: block;
+            padding: 5px;
+            width: 90%;
+            border-radius: 10px;
+            border: solid green 2px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Optional styling to make the footer more visually appealing */
+        footer {
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="https://formspree.io/f/xvonykba" method="POST">
+        <h1>Preloader Templates</h1>
+
+        <input class="fname" type="text" name="name" placeholder="Full name" required>
+
+        <input type="checkbox" name="custom">I want to coustomise<br />
+
+        <div class="card">
+            <label class="color-checkbox">
+                <input type="checkbox" class="fname" name="card1">
+                <span class="checkmark">
+                    <iframe src="1/1.html"></iframe>
+                    <h2>Card 1</h2>
+                </span>
+            </label>
+        </div>
+
+
+
+        <div class="card">
+            <label class="color-checkbox">
+                <input type="checkbox" class="fname" name="card2">
+                <span class="checkmark">
+                    <iframe src="2.html"></iframe>
+                    <h2>Card 2</h2>
+                </span>
+            </label>
+        </div>
+
+
+
+        <div class="card">
+            <label class="color-checkbox">
+                <input type="checkbox" class="fname" name="card3">
+                <span class="checkmark">
+                    <iframe src="3.html"></iframe>
+                    <h2>Card 3</h2>
+                </span>
+            </label>
+        </div>
+
+
+
+        <div class="card">
+            <label class="color-checkbox">
+                <input type="checkbox" class="fname" name="card4">
+                <span class="checkmark">
+                    <iframe src="4.html"></iframe>
+                    <h2>Card 4</h2>
+                </span>
+            </label>
+        </div>
+
+
+        <div class="card">
+            <label class="color-checkbox">
+                <input type="checkbox" class="fname" name="card5">
+                <span class="checkmark">
+                    <iframe src="5/index.html"></iframe>
+                    <h2>Card 5</h2>
+                </span>
+            </label>
+        </div>
+
+        <div class="card">
+            <label class="color-checkbox">
+                <input type="checkbox" class="fname" name="card6">
+                <span class="checkmark">
+                    <iframe src="6/index.html"></iframe>
+                    <h2>Card 6</h2>
+                </span>
+            </label>
+        </div>
+
+        <div class="card">
+            <label class="color-checkbox">
+                <input type="checkbox" class="fname" name="card7">
+                <span class="checkmark">
+                    <iframe src="7/index.html"></iframe>
+                    <h2>Card 7</h2>
+                </span>
+            </label>
+        </div>
+
+        <button id="myBtn" type="submit">Submit</button>
+
+
+
+    </form>
+
+
+    <a href="#"><button id="top" title="Go to top">Top</button></a>
+
+
+    <footer>
+        <p>&copy; 2023 . All rights reserved. | The Craftii</p>
+    </footer>
+
+</body>
+
+</html>
