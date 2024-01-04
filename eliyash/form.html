@@ -1,0 +1,107 @@
+
+<html>
+<head>
+<style>
+/* Style the form */
+form {
+  border: 3px solid #f1f1f1;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+}
+
+/* Style the input fields */
+input[type=text], input[type=email], input[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid dodgerblue;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: dodgerblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the error message */
+.error {
+  color: red;
+}
+
+</style>
+</head>
+<body>
+
+<h2>participation form</h2>
+
+<form id="myForm" action="https://formspree.io/f/xleyowlo"
+method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+  <label for="email">Email ID:</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email ID" required>
+
+  <label for="phone">Indian Phone Number:</label>
+  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+
+  <label for="message">Your Busness:</label>
+  <input type="text" id="message" name="message" placeholder="Enter your message">
+  <input type="submit" value="Submit">
+</form>
+
+<!-- <script>
+// Get the form element
+var form = document.getElementById("myForm");
+
+// Add an event listener to handle the form submission
+form.addEventListener("submit", function(event) {
+  
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the input elements
+  var name = document.getElementById("name");
+  var email = document.getElementById("email");
+  var phone = document.getElementById("phone");
+  
+  // Validate the input values
+  if (name.value == "") {
+    // Name is empty
+    alert("Please enter your name");
+    return false;
+  }
+  
+   if (email.value == "") {
+    // Email is empty
+    alert("Please enter your email ID");
+    return false;
+   }
+   
+   if (phone.value == "") {
+    // Phone is empty
+    alert("Please enter your phone number");
+    return false;
+   }
+   
+   if (!phone.value.match(/[0-9]{10}/)) {
+    // Phone is not a valid Indian number
+    alert("Please enter a valid Indian phone number");
+    return false;
+   }
+   
+   // If everything is valid, submit the form data
+   //alert("Form submitted successfully!");
+   //return true;
+
+});
+</script> -->
+
+</body>
+</html>
