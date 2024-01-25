@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+    overflow-x: hidden;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  /* nav start */
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .sidepanel {
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+    position: fixed;
+    z-index: 100;
+  }
+  
+  li a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  li a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  .openbtn {
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    float: right;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  .direction {
+    background-color: black;
+    padding: 5px;
+    top: 0;
+    right: 0;
+  }
+  
+  .direction a {
+    padding-right: 1rem;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+  }
+  
+  
+  
+  @media screen and (min-width: 600px) {
+    .direction a {
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    .direction {
+      font-size: 20px;
+    }
+  }
+  
+  .direction a:hover {
+    color: #f1f1f1;
+  }
+  
+  h2 {
+    margin-left: 10px;
+  }
+  
+  #mySearch {
+    margin-left: 10px;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  #top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 150;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #top:hover {
+    background-color: #555;
+  }
+  
+  nav img {
+    width: 3rem;
+  }
+  
+  /* nav end */

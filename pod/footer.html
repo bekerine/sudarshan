@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* footer start */
+
+footer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.footer .section {
+  flex: 1 0 200px;
+  margin: 1rem;
+  box-sizing: border-box;
+}
+
+.footer .section a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .section img{
+  width: 2rem;
+  border: 1.5px solid;
+  border-color: #fff;
+}
+
+.footer .logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer .logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.footer .social-media {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+
+/* social media start */
+
+.social-media {
+  background-color: #333;
+}
+
+.footer-social-links {
+  font-size: 14px;
+  text-align: center;
+  /* margin-top: 20%; */
+}
+
+.footer-social-links a {
+  width: 25px;
+  height: 25px;
+  line-height: 25px !important;
+  position: relative;
+  margin: 0 5px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+
+  -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+}
+
+.footer-social-links a i,
+.footer-social-links a span {
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+
+.footer-social-links a:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #fff;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+
+}
+
+/* .footer-social-links a:hover {
+  color: #fff;
+} */
+
+.footer-social-links a:hover:before {
+  background: #111;
+}
+
+/* social media end */
+
+footer span a{
+  color: white;
+  text-align: center;
+}
+
+footer span{
+  margin-top: 2rem;
+  margin-left: 6rem;
+}
+/* footer end */
+
+</style>
+
+</head>
+<body>
+    
+<!-- footer start -->
+
+<footer>
+
+    <div class="footer">
+      <div class="section logo">
+        <img src="logo.jpeg" alt="Company Logo">
+        <h5>Otakunaime</h5>
+      </div>
+      <div class="section">
+        <h3>Company</h3>
+        <a href="#">Abou Us</a><br>
+        <a href="#">Blogs</a><br>
+        <!-- Add more links as needed -->
+      </div>
+      <div class="section">
+        <h3>Policies</h3>
+        <a href="#">Privacy Policy</a><br>
+        <a href="#">Return Policy</a><br>
+        <a href="#">Saales Policy</a><br>
+        <a href="#">Company Policy</a><br>
+        <!-- Add more links as needed -->
+      </div>
+      <div class="section">
+        <h3>Contacts</h3>
+        <a href="#"><img src="mail.svg" alt="" srcset=""></a><br>
+        <a href="tel:+917819055044"><img src="phone.svg" alt="" srcset=""></a><br>
+        <a href="#"><img src="whatsapp.svg" alt="" srcset=""></a><br>
+        <a href="#"><img src="telegram.svg" alt="" srcset=""></a><br>
+        <!-- Add more links as needed -->
+      </div>
+      <!-- <div class="section">
+        <h3>Section 5</h3>
+        <a href="#">Link 1</a><br>
+        <a href="#">Link 2</a><br>
+      </div> -->
+
+      <!-- social media start -->
+      <div class="social-media">
+
+        <div class="footer-social-links">
+          <a href="https://t.me/+OrTk6UBXiRFkOTA1" title="Facebook" target="_blank"><i class="fa fa-telegram"></i></a>
+          <a href="#" title="Twitter" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="#" title="Google+" target="_blank"><i class="fa fa-youtube"></i></a>
+          <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="#" title="Dribbble" target="_blank"><i class="fa fa-google"></i></a>
+        </div>
+
+      </div>
+      <!-- social media end -->
+
+      <span> © copyright 2024 <a href="#">contact the developer</a></span>
+    </div>
+
+  </footer>
+
+  <!-- footer end -->
+
+</body>
+</html>

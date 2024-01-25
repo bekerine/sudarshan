@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <main>
+
+    <nav>
+
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="left" style="background-color:#bbb;">
+          <h2>Menu</h2>
+          <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search anime or product" title="Type in a category">
+          <ul id="myMenu">
+            <li><a href="#">One-Piece</a></li>
+            <li><a href="#">Naruto</a></li>
+            <li><a href="#">Attack-On-Titans</a></li>
+            <li><a href="#">Dragon-Ball-Z</a></li>
+            <li><a href="#">Posters</a></li>
+            <li><a href="#">Stickers</a></li>
+            <li><a href="#">Black-Clover</a></li>
+            <li><a href="#">Death-Note</a></li>
+            <li><a href="#">Jujutsu-Kaison</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="direction">
+        <button class="openbtn" onclick="openNav()">🔍</button>
+        <button class="openbtn">🛒</button>
+        <button class="openbtn">👤</button>
+        <!-- <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a> -->
+
+        <a href="#"><img src="logo.jpeg" alt="" srcset=""></a>
+        <a href=""><span>Explore for more offers</span></a>
+      </div>
+
+    </nav>
+    <a href="#"><button id="top" title="Go to top">FAQ</button></a>
+
+    <!-- slider start -->
+
+    <div class="slideshow-container">
+
+      <!-- Your slides here -->
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="2.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="2.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="2.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- slider end -->
+
+    <!-- content start -->
+    <div id="content">
+
+      <h2>Posters</h2>
+
+      <section class="product">
+        <button class="pre-btn"><img src="right-arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="right-arrow.png" alt=""></button>
+        <div class="product-container">
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="logo.jpeg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card2.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card3.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card4.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card5.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card6.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card7.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card8.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card9.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card10.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <div id="content">
+
+      <h2>Stickers</h2>
+
+      <section class="product">
+        <button class="pre-btn"><img src="right-arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="right-arrow.png" alt=""></button>
+        <div class="product-container">
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="logo.jpeg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card2.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card3.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card4.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card5.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card6.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card7.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card8.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card9.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <span class="discount-tag">50% off</span>
+              <img src="images/card10.jpg" class="product-thumb" alt="">
+              <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+              <h2 class="product-brand">brand</h2>
+              <p class="product-short-description">a short line about the cloth..</p>
+              <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- content end -->
+
+    <!-- category start -->
+
+    <div class="anime">
+      <h2>Our Collection</h2>
+
+      <div class="card-container">
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="naruto.jpg" class="cover-image" />
+            </div>
+            <img src="naruto-name.png" class="title" />
+            <img src="naruto-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="goku.jpg" class="cover-image" />
+            </div>
+            <img src="goku-name.png" class="title" />
+            <img src="goku-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="atack-on-titan.jpg" class="cover-image" />
+            </div>
+            <img src="atack-on-titan-name.png" class="title" />
+            <img src="atack-on-titan-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="asta.png" class="cover-image" />
+            </div>
+            <img src="asta-name.png" class="title" />
+            <img src="asta-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="one-piece.jpg" class="cover-image" />
+            </div>
+            <img src="one-piece-name.png" class="title" />
+            <img src="one-piece-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="jjk.jpg" class="cover-image" />
+            </div>
+            <img src="jjk-name.png" class="title" />
+            <img src="jjk-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="light.jpg" class="cover-image" />
+            </div>
+            <img src="light-name.png" class="title" />
+            <img src="light-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="demon-slayer.jpg" class="cover-image" />
+            </div>
+            <img src="demon-slyer-name.png" class="title" />
+            <img src="demon-slayer-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="mha.png" class="cover-image" />
+            </div>
+            <img src="mha-name.png" class="title" />
+            <img src="mha-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="opm.jpg" class="cover-image" />
+            </div>
+            <img src="opm-name.png" class="title" />
+            <img src="opm-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="bleach.jpg" class="cover-image" />
+            </div>
+            <img src="bleach-name.png" class="title" />
+            <img src="bleach-action.png" class="character" />
+
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="card">
+            <div class="wrapper">
+              <img src="dengi.jpg" class="cover-image" />
+            </div>
+            <img src="dengi-name.png" class="title" />
+            <img src="dengi-action.png" class="character" />
+
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- category end -->
+
+    <!-- footer start -->
+
+    <footer>
+
+      <div class="footer">
+        <div class="section logo">
+          <img src="logo.jpeg" alt="Company Logo">
+          <h5>Otakunaime</h5>
+        </div>
+        <div class="section">
+          <h3>Company</h3>
+          <a href="#">Abou Us</a><br>
+          <a href="#">Blogs</a><br>
+          <!-- Add more links as needed -->
+        </div>
+        <div class="section">
+          <h3>Policies</h3>
+          <a href="#">Privacy Policy</a><br>
+          <a href="#">Return Policy</a><br>
+          <a href="#">Saales Policy</a><br>
+          <a href="#">Company Policy</a><br>
+          <!-- Add more links as needed -->
+        </div>
+        <div class="section">
+          <h3>Contacts</h3>
+          <a href="#"><img src="mail.svg" alt="" srcset=""></a><br>
+          <a href="tel:+917819055044"><img src="phone.svg" alt="" srcset=""></a><br>
+          <a href="#"><img src="whatsapp.svg" alt="" srcset=""></a><br>
+          <a href="#"><img src="telegram.svg" alt="" srcset=""></a><br>
+          <!-- Add more links as needed -->
+        </div>
+        <!-- <div class="section">
+          <h3>Section 5</h3>
+          <a href="#">Link 1</a><br>
+          <a href="#">Link 2</a><br>
+        </div> -->
+
+        <!-- social media start -->
+        <div class="social-media">
+
+          <div class="footer-social-links">
+            <a href="https://t.me/+OrTk6UBXiRFkOTA1" title="Facebook" target="_blank"><i class="fa fa-telegram"></i></a>
+            <a href="#" title="Twitter" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" title="Google+" target="_blank"><i class="fa fa-youtube"></i></a>
+            <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="#" title="Dribbble" target="_blank"><i class="fa fa-google"></i></a>
+          </div>
+
+        </div>
+        <!-- social media end -->
+
+        <span> © copyright 2024 <a href="#">contact the developer</a></span>
+      </div>
+
+    </footer>
+
+    <!-- footer end -->
+
+  </main>
+
+
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+  </script>
+
+  <script>
+    function myFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  <script>
+    const productContainers = [...document.querySelectorAll('.product-container')];
+    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+    const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+    productContainers.forEach((item, i) => {
+      let containerDimensions = item.getBoundingClientRect();
+      let containerWidth = containerDimensions.width;
+
+      nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+      })
+
+      preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+      })
+    })
+  </script>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Add this line to change slide every 2 seconds
+    setInterval(function () { plusSlides(1) }, 2000);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>

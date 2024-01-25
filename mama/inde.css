@@ -17,6 +17,10 @@ h3{
 
 body {margin:0;font-family:Arial;padding:0%;overflow-x: hidden;}
 
+nav{
+  overflow-x: hidden;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #709F9D;
@@ -135,6 +139,7 @@ body {margin:0;font-family:Arial;padding:0%;overflow-x: hidden;}
     background-color: coral;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    overflow-x: hidden;
 }
 
 .a1{
@@ -480,7 +485,8 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    overflow-x: hidden;
 }
 
 footer p {
