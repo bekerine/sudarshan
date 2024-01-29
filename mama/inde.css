@@ -136,14 +136,18 @@ nav{
 /* a start */
 .a{
     width: 100%;
-    background-color: coral;
+    color: BLACK;
+    /* background-color: coral; */
+    background-image: url("1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 5rem;
     padding-bottom: 5rem;
     overflow-x: hidden;
 }
 
 .a1{
-    color: white;
+    /* color: white; */
     text-align: center;
     font-size: xx-large;
 }
@@ -155,7 +159,7 @@ nav{
 h1 { 
     display: flex;
     justify-content: center; 
-    color: white; 
+    /* color: white;  */
 } 
 
 span::before { 

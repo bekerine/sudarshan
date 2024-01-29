@@ -134,4 +134,13 @@ nav {
     width: 3rem;
   }
   
+  .badge {
+    position: absolute;
+    right: 50px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: xx-small;
+  }
   /* nav end */

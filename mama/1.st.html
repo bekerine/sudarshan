@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            position: relative;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100vh;
+        }
+
+         .imgtext img{
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+
+        .imgtext img {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5rem;
+            height: 5rem;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="home.html">
+        <main>
+            <img src="logo-3.gif" alt="" srcset="">
+            <div class="imgtext">
+                <img src="right arrow.png" alt="" srcset="">
+            </div>
+        </main>
+    </a>
+</body>
+
+</html>

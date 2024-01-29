@@ -25,6 +25,7 @@
     <div class="direction">
         <button class="openbtn" onclick="openNav()">🔍</button>
         <button class="openbtn">🛒</button>
+        <span class="badge">1</span>
         <button class="openbtn">👤</button>
         <!-- <a href="#">About</a>
 <a href="#">Services</a>
@@ -38,3 +39,31 @@
 </nav>
 <a href="#"><button id="top" title="Go to top">FAQ</button></a>
 <!-- nav end -->
+
+<script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    }
+</script>
+
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
