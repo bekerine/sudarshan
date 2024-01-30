@@ -19,7 +19,7 @@ body {
   margin-left: -4rem;
 }
 
-.right{
+.right {
   background-image: url("leaves\ 2.gif");
   background-repeat: repeat-x;
   object-fit: cover;
@@ -27,7 +27,7 @@ body {
   /* padding-bottom: 5rem; */
 }
 
-.tv{
+.tv {
   width: 9rem;
   float: right;
   margin-right: -9.5rem;
@@ -35,7 +35,7 @@ body {
   z-index: 20;
 }
 
-.show img{
+.show img {
   width: 10rem;
   float: right;
   margin-right: 15rem;
@@ -43,7 +43,7 @@ body {
   z-index: 50;
 }
 
-body{
+body {
   background-image: url("falling\ leaves.gif");
   background-repeat: no-repeat;
   object-fit: cover;
@@ -61,12 +61,12 @@ nav {
 
 /* nav-option */
 
-.social ul li a{
+.social ul li a {
   color: white;
   font-size: larger;
 }
 
-.social ul li a{
+.social ul li a {
   color: white;
 }
 
@@ -75,10 +75,12 @@ nav {
   right: -20rem;
   top: 5rem;
 }
+
 .social ul {
   padding: 0px;
   transform: translate(0, 0, 0, -270px);
 }
+
 .social ul li {
   display: block;
   margin: 5px;
@@ -90,7 +92,7 @@ nav {
   transition: all 1s;
 }
 
-.social span{
+.social span {
   color: white;
 }
 
@@ -98,16 +100,19 @@ nav {
   transform: translate(0, 0, 0, 110px);
   background: #B7092B;
 }
+
 .social ul li:hover a {
   color: white;
   font-size: larger;
 }
+
 .social ul li:hover i {
   color: #fff;
   background: white;
   transform: rotate(360deg);
   transition: all 1s;
 }
+
 .social ul li i {
   margin-left: 10px;
   color: white;
@@ -129,13 +134,13 @@ nav {
 
 /* image galarrery start */
 
-.sliders{
+.sliders {
   display: grid;
   place-items: center;
   margin-top: -1.3rem;
 }
 
-.slide{
+.slide {
   height: 100%;
   margin: 0;
   position: relative;
@@ -144,7 +149,7 @@ nav {
   place-items: center;
 }
 
-.slide{
+.slide {
   height: 100%;
   width: 100%;
   display: flex;
@@ -152,94 +157,95 @@ nav {
   padding: 15px;
 }
 
-.slide-track{
+.slide-track {
   display: flex;
   /* width: calc(250px*18); */
   animation: scroll 40s linear infinite;
 }
 
-@keyframes scroll{
-0% {
-  transform: translateX(0);
-}
-100% {
-  transform: translateX(calc(-250px*9));
-}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px*9));
+  }
 }
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
-position: relative;
-width: 30rem;
-display: block;
-margin: auto;
+  position: relative;
+  width: 30rem;
+  display: block;
+  margin: auto;
 }
 
 /* Hide the images by default */
 .mySlides {
-display: none;
+  display: none;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
-cursor: pointer;
+  cursor: pointer;
 }
 
 /* Next & previous buttons */
 .prev,
 .next {
-cursor: pointer;
-position: absolute;
-top: 30%;
-width: auto;
-padding: 16px;
-margin-top: -50px;
-color: white;
-font-weight: bold;
-font-size: 20px;
-border-radius: 0 3px 3px 0;
-user-select: none;
--webkit-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-right: 0;
-border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-color: #f2f2f2;
-font-size: 12px;
-padding: 8px 12px;
-position: absolute;
-top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
 /* Container for image text */
 .caption-container {
-text-align: center;
-background-color: #222;
-padding: 2px 16px;
-color: white;
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
 }
 
 /* Add a transparency effect for thumnbail images */
 .demo {
-opacity: 0.6;
-margin-left: .5rem;
+  opacity: 0.6;
+  margin-left: .5rem;
 }
 
 .active,
 .demo:hover {
-opacity: 1;
+  opacity: 1;
 }
 
 .image-galerrary {
@@ -264,13 +270,13 @@ video {
   margin-top: -20rem;
 }
 
-.about{
+.about {
   background-image: url("back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.about-us p{
+.about-us p {
   padding: 0 10rem 0 10rem;
   color: black;
   font-family: Garamond;
@@ -284,7 +290,7 @@ video {
   margin-left: 10rem;
 }
 
-.about-us h1 i{
+.about-us h1 i {
   color: #B7092B;
 }
 
@@ -314,7 +320,7 @@ video {
   margin-bottom: -1rem;
 }
 
-.clients iframe{
+.clients iframe {
   width: 100%;
   height: 12rem;
   margin-bottom: 1rem;
@@ -330,7 +336,7 @@ video {
   margin-bottom: 2rem;
 }
 
-.team{
+.team {
   padding: 2rem;
 }
 
@@ -342,24 +348,25 @@ video {
   min-height: 100vh;
   font-family: sans-serif;
 } */
-.box{
+.box {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 2rem;
 }
-.card-team-1{
+
+.card-team-1 {
   position: relative;
   width: 20rem;
   height: 20rem;
   background: #fff;
   border-radius: 4px;
-  box-shadow:0 2px 10px rgba(0,0,0,.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
 }
+
 .card-team-1:before,
-.card-team-1:after
-{
-  content:"";
+.card-team-1:after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -368,65 +375,67 @@ video {
   border-radius: 4px;
   background: #fff;
   transition: 0.5s;
-  z-index:-1;
-}
-.card-team-1:hover:before{
-transform: rotate(20deg);
-box-shadow: 0 2px 20px rgba(0,0,0,.2);
-}
-.card-team-1:hover:after{
-transform: rotate(10deg);
-box-shadow: 0 2px 20px rgba(0,0,0,.2);
-}
-.card-team-1 .imgBx{
-position: absolute;
-top: 10px;
-left: 10px;
-bottom: 10px;
-right: 10px;
-background: #222;
-transition: 0.5s;
-z-index: 1;
+  z-index: -1;
 }
 
-.card-team-1:hover .imgBx
-{
+.card-team-1:hover:before {
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+
+.card-team-1:hover:after {
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+
+.card-team-1 .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card-team-1:hover .imgBx {
   bottom: 80px;
 }
 
-.card-team-1 .imgBx img{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card-team-1 .imgBx img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.card-team-1 .details{
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    height: 60px;
-    text-align: center;
+.card-team-1 .details {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 60px;
+  text-align: center;
 }
 
-.card-team-1 .details h2{
- margin: 0;
- padding: 0;
- font-weight: 600;
- font-size: 20px;
- color: #777;
- text-transform: uppercase;
-} 
+.card-team-1 .details h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 20px;
+  color: #777;
+  text-transform: uppercase;
+}
 
-.card-team-1 .details h2 span{
-font-weight: 500;
-font-size: 16px;
-color: #f38695;
-display: block;
- } 
+.card-team-1 .details h2 span {
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+}
 
 /* team end */
 
@@ -436,112 +445,106 @@ display: block;
   padding: 2rem;
 }
 
-.services h1{
+.services h1 {
   text-align: center;
   padding-bottom: 2rem;
 }
 
-.service-card{
+.service-card {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 2rem;
 }
 
-    section {
-padding: .5rem;
+section {
+  padding: .5rem;
 }
 
 .card {
-border-radius: 16px;
-margin: 0 auto;
-width: 100%;
+  border-radius: 16px;
+  margin: 0 auto;
+  width: 100%;
 
-height: 95%;
-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-0px 5px 8px 0px rgba(0, 0, 0, 0.14),
-0px 1px 14px 0px rgba(0, 0, 0, 0.12);
-overflow: hidden;
-/* background-image: url(digital-marketing.png); */
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  height: 95%;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  /* background-image: url(digital-marketing.png); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#service-1{
+#service-1 {
   background-image: url(media&marketing.jpg);
 }
 
-#service-2{
+#service-2 {
   background-image: url(demo.png);
 }
 
-.about{
-  
-}
+.about {}
 
-#service-3{
+#service-3 {
   background-image: url(film-production-services.jpg);
 }
 
-#service-4{
+#service-4 {
   background-image: url(Film-Distribution.png);
 }
 
-#service-5{
+#service-5 {
   background-image: url(Branded-Content_out.jpg);
 }
 
-#service-6{
+#service-6 {
   background-image: url(music-production.jpg);
 }
 
 .info {
-position: relative;
-margin-bottom: .5rem;
-height: 500px;
-background-color: #fff;
-transform: translateY(100%)
-translateY(-88px)
-translateZ(0);
-transition: transform 0.5s ease-out;
+  position: relative;
+  margin-bottom: .5rem;
+  height: 500px;
+  background-color: #fff;
+  transform: translateY(100%) translateY(-88px) translateZ(0);
+  transition: transform 0.5s ease-out;
 }
 
 .info:before {
-z-index: -1;
-display: block;
-position: absolute;
-content: ' ';
-width: 100%;
-height: 100%;
-overflow: hidden;
-background-image: url();
-filter: blur(10px);
-background-size: cover;
-opacity: 0.25;
-transform: translateY(-100%)
-translateY(88px)
-translateZ(0);
-transition: transform 0.5s ease-out;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url();
+  filter: blur(10px);
+  background-size: cover;
+  opacity: 0.25;
+  transform: translateY(-100%) translateY(88px) translateZ(0);
+  transition: transform 0.5s ease-out;
 }
 
 .card:hover .info,
 .card:hover .info:before {
-transform: translateY(0) translateZ(0);
+  transform: translateY(0) translateZ(0);
 }
 
 .title {
-margin: 0;
-padding: 24px;
-font-size: 40px;
-line-height: 1;
-color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  padding: 24px;
+  font-size: 40px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .description {
-margin: 0;
-padding: 0 24px 24px;
-font-size: 18px;
-line-height: 1.5;
+  margin: 0;
+  padding: 0 24px 24px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 /* services end */
