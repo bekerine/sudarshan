@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* nav start */
@@ -24,6 +25,22 @@ body {
   object-fit: cover;
   padding-top: 5rem;
   /* padding-bottom: 5rem; */
+}
+
+.tv{
+  width: 9rem;
+  float: right;
+  margin-right: -9.5rem;
+  margin-top: 5.6rem;
+  z-index: 20;
+}
+
+.show img{
+  width: 10rem;
+  float: right;
+  margin-right: 15rem;
+  margin-top: 5rem;
+  z-index: 50;
 }
 
 body{
@@ -112,97 +129,128 @@ nav {
 
 /* image galarrery start */
 
-img {
-  vertical-align: middle;
+.sliders{
+  display: grid;
+  place-items: center;
+  margin-top: -1.3rem;
+}
+
+.slide{
+  height: 100%;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.slide{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.slide-track{
+  display: flex;
+  /* width: calc(250px*18); */
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll{
+0% {
+  transform: translateX(0);
+}
+100% {
+  transform: translateX(calc(-250px*9));
+}
 }
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
-  position: relative;
-  box-sizing: border-box;
+position: relative;
+width: 30rem;
+display: block;
+margin: auto;
 }
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+display: none;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
-  cursor: pointer;
+cursor: pointer;
 }
 
 /* Next & previous buttons */
 .prev,
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+cursor: pointer;
+position: absolute;
+top: 30%;
+width: auto;
+padding: 16px;
+margin-top: -50px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+right: 0;
+border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
 }
 
 /* Container for image text */
 .caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
+text-align: center;
+background-color: #222;
+padding: 2px 16px;
+color: white;
 }
 
 /* Add a transparency effect for thumnbail images */
-/* .demo {
-    opacity: 0.6;
-  } */
+.demo {
+opacity: 0.6;
+margin-left: .5rem;
+}
 
-/* .active,
-  .demo:hover {
-    opacity: 1;
-  } */
+.active,
+.demo:hover {
+opacity: 1;
+}
 
 .image-galerrary {
-  background-color: orange;
-  padding: 5rem;
+  background-color: #BA790E;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%
 }
 
 /* image galarrery end */
@@ -249,6 +297,10 @@ img {
   padding: -5rem;
 }
 
+.careers p {
+  padding: 0 10rem 0 10rem;
+}
+
 .clients h1 {
   text-align: center;
   margin-bottom: -2rem;
@@ -274,10 +326,12 @@ img {
 
 .team h1 {
   text-align: center;
+  /* margin-left: 30rem; */
+  margin-bottom: 2rem;
 }
 
 .team{
-  padding: 5rem;
+  padding: 2rem;
 }
 
 /* .a {
@@ -291,8 +345,8 @@ img {
 .box{
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 5rem;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2rem;
 }
 .card-team-1{
   position: relative;
@@ -443,7 +497,7 @@ background-repeat: no-repeat;
 
 .info {
 position: relative;
-
+margin-bottom: .5rem;
 height: 500px;
 background-color: #fff;
 transform: translateY(100%)
@@ -495,16 +549,18 @@ line-height: 1.5;
 /* careers start */
 
 .careers {
-  background-color: #52d3d9;
-  padding: 10rem;
+  background-color: #B7092B;
+  padding: 5rem;
   text-align: center;
+  color: white;
 }
 
 .careers h1 {
   margin-bottom: 2.5rem;
+  /* color: white; */
 }
 
-.cards {
+.careers .cards {
   display: grid;
   grid-template-columns: auto auto;
   gap: 10rem;
@@ -512,7 +568,7 @@ line-height: 1.5;
   justify-content: center;
 }
 
-.box {
+.csreers .box {
   width: 40%;
   margin-top: 5rem;
   margin-left: 5rem;
@@ -717,27 +773,3 @@ footer p {
 }
 
 /* footer end */
-
-/* go to top start */
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  background-color: #555;
-}
-
-/* go to top end */
