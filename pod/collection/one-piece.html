@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otakunaime</title>
+    <link rel="stylesheet" href="anime.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="data/footer.css">
+    <link rel="stylesheet" href="data/nav.css">
+
+    <link rel="icon" type="image/x-icon" href="data/logo.jpeg">
+</head>
+
+<body>
+    <main>
+        <!-- nav start -->
+        <nav>
+
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="left" style="background-color:#bbb;">
+                    <h2>Menu</h2>
+                    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search anime or product"
+                        title="Type in a category">
+                    <ul id="myMenu">
+                        <li><a href="one-piece.html">One-Piece</a></li>
+                        <li><a href="naruto.html">Naruto</a></li>
+                        <li><a href="attack-on-titans.html">Attack-On-Titans</a></li>
+                        <li><a href="dragon-ball-z.html">Dragon-Ball-Z</a></li>
+                        <li><a href="posters.html">Posters</a></li>
+                        <li><a href="stickers.html">Stickers</a></li>
+                        <li><a href="black-clover.html">Black-Clover</a></li>
+                        <li><a href="death-note.html">Death-Note</a></li>
+                        <li><a href="jujutsu-kaisen.html">Jujutsu-Kaison</a></li>
+                        <li><a href="one-punch-man.html">One-Punch-Man</a></li>
+                        <li><a href="demon-slayer.html">Demon-Slayer</a></li>
+                        <li><a href="chain-sawman.html">Chain-Sawman</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="direction">
+                <button class="openbtn" onclick="openNav()">🔍</button>
+                <button class="openbtn">🛒</button>
+                <span class="badge">1</span>
+                <button class="openbtn">👤</button>
+                <!-- <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a> -->
+
+                <a href="otakunaime.in"><img src="data/logo.jpeg" alt="" srcset=""></a>
+                <a href=""><span>Explore for more offers</span></a>
+            </div>
+
+        </nav>
+        <a href="1.html"><button id="top" title="Go to top">FAQ</button></a>
+        <!-- nav end -->
+
+        <!-- content start -->
+
+        <div class="tab">
+            <button class="tablinks" id="b" onclick="openCity(event, 'London')">Posters</button>
+            <button class="tablinks" id="a" onclick="openCity(event, 'Paris')">Stickers</button>
+        </div>
+
+        <div id="London" class="tabcontent">
+
+            <!-- posters start -->
+            <h1>Posters</h1>
+
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- posters end -->
+
+        <div id="Paris" class="tabcontent">
+
+            <!-- stickers start -->
+            <h1>Stickers</h1>
+
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <div class="card">
+                    <img src="template.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Tailored Jeans</h1>
+                    <p class="price">$19.99</p>
+                    <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim
+                        lorem jeansum.</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- stickers end -->
+
+        <!-- content end -->
+
+        <!-- footer start -->
+        <!-- <iframe src="footer.html" frameborder="0"></iframe> -->
+
+        <footer>
+
+            <div class="footer">
+                <div class="section logo">
+                    <img src="data/logo.jpeg" alt="Company Logo">
+                    <h5>Otakunaime</h5>
+                </div>
+                <div class="section">
+                    <h3>Company</h3>
+                    <a href="data/about-us.html">Abou Us</a><br>
+                    <a href="blog/1.html">Blogs</a><br>
+                    <!-- Add more links as needed -->
+                </div>
+                <div class="section">
+                    <h3>Policies</h3>
+                    <a href="data/privacy-policy.html">Privacy Policy</a><br>
+                    <a href="data/return-policy.html">Return Policy</a><br>
+                    <a href="data/sales-policy.html">Saales Policy</a><br>
+                    <a href="data/company-policy.html">Company Policy</a><br>
+                    <a href="data/terms-and-conditions.html">Terms and Conditions</a><br>
+                    <!-- Add more links as needed -->
+                </div>
+                <div class="section">
+                    <h3>Contacts</h3>
+                    <a href="mailto:email@example.com"><img src="data/mail.svg" alt="" srcset=""></a><br>
+                    <a href="tel:+917819055044"><img src="data/phone.svg" alt="" srcset=""></a><br>
+                    <a href="#"><img src="data/whatsapp.svg" alt="" srcset=""></a><br>
+                    <a href="#"><img src="data/telegram.svg" alt="" srcset=""></a><br>
+                    <!-- Add more links as needed -->
+                </div>
+                <!-- <div class="section">
+        <h3>Section 5</h3>
+        <a href="#">Link 1</a><br>
+        <a href="#">Link 2</a><br>
+      </div> -->
+
+                <!-- social media start -->
+                <div class="social-media">
+
+                    <div class="footer-social-links">
+                        <a href="https://t.me/+OrTk6UBXiRFkOTA1" title="Facebook" target="_blank"><i
+                                class="fa fa-telegram"></i></a>
+                        <a href="#" title="Twitter" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" title="Google+" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" title="Dribbble" target="_blank"><i class="fa fa-google"></i></a>
+                    </div>
+
+                </div>
+                <!-- social media end -->
+
+                <span> © copyright 2024 <a href="profile.html">contact the developer</a></span>
+            </div>
+
+        </footer>
+
+        <!-- footer end -->
+
+    </main>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+    </script>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Add this line to make Tokyo the default tab
+        document.querySelector('.tab button[onclick="openCity(event, \'London\')"]').click();
+    </script>
+
+</body>
+
+</html>
