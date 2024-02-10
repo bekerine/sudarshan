@@ -1,5 +1,16 @@
 <!-- nav start -->
+
 <nav>
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active"><img src="logo.jpeg" alt="Home"></a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a> -->
+      </div>
 
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -33,13 +44,24 @@
 <a href="#">Clients</a>
 <a href="#">Contact</a> -->
 
-        <a href="#"><img src="logo.jpeg" alt="" srcset=""></a>
+        <!-- <a href="#"><img src="logo.jpeg" alt="" srcset=""></a> -->
         <a href=""><span>Explore for more offers</span></a>
     </div>
 
 </nav>
 <a href="#"><button id="top" title="Go to top">FAQ</button></a>
 <!-- nav end -->
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 
 <script>
     function openNav() {
