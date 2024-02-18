@@ -20,6 +20,11 @@
   display: none;
 }
 
+.topnav a img{
+  width: 30px;
+  height: 30px;
+}
+
 .topnav a {
   float: left;
   color: white;
