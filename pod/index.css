@@ -293,6 +293,16 @@ button:hover {
   width: 250px;
   height: 450px;
   margin-right: 40px;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll{
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-250px*9));
+  }
 }
 
 .product-image {

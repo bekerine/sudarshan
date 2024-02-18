@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Otakunaime Chatbot</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        #chatbox {
+            width: 300px;
+            height: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            box-shadow: 10px 0 10px 0 red;
+            background-color: white;
+            margin-top: 5%;
+            border-radius: 10px;
+        }
+
+        #messages {
+            height: 400px;
+            overflow: auto;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .message {
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .userMessage {
+            background-color: #E8F0FE;
+            text-align: left;
+        }
+
+        .botMessage {
+            background-color: #F0E8FE;
+            text-align: right;
+        }
+
+        #userInput {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box; /* Ensures padding doesn't increase the width */
+        }
+
+        h1{
+            text-align: center;
+            color: black;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="logo.jpeg">
+</head>
+
+<body>
+    <div id="chatbox">
+        <u><h1>FAQ Chatbot</h1></u>
+        <div id="messages"></div>
+        <select id="userInput">
+            <option value="">Select a question...</option>
+            <option value="Hello">Hello</option>
+            <option value="How are you?">How are you?</option>
+            <option value="Talk to a human">Talk to a human</option>
+        </select>
+    </div>
+    <script>
+        let database = {
+            'Hello': 'Hi there!',
+            'How are you?': 'I\'m a bot, I don\'t have feelings, but thanks for asking!'
+        };
+
+        document.getElementById('userInput').addEventListener('change', function () {
+            let input = this.value;
+            document.getElementById('messages').innerHTML += `<div class="message userMessage"><strong>User:</strong> ${input}</div>`;
+            getResponse(input);
+        });
+
+        function getResponse(input) {
+            let response;
+            if (database[input]) {
+                response = database[input];
+            } else if (input === 'Talk to a human') {
+                response = 'Redirecting you to the help page...';
+                window.location.href = 'https://www.yourwebsite.com/help'; // replace with your help page URL
+            } else {
+                response = 'Please select a question.';
+            }
+            document.getElementById('messages').innerHTML += `<div class="message botMessage"><strong>Bot:</strong> ${response}</div>`;
+        }
+    </script>
+</body>
+
+</html>
