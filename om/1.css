@@ -203,7 +203,7 @@ span{
   align-items: center;
   gap:2rem;
   background: var(--second-bg-color);
-
+  padding-top: 15rem;
 }
  
 span{
