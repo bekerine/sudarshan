@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to left top, #031A9A, #8B53FF);
+  background-color: #1F242D;
 }
 
 .wrapper {
@@ -96,6 +96,7 @@ body {
   padding-bottom: 15px;
   flex-direction: column;
   border-radius: 8px;
+  background-color: #1F242D;
 }
 
 .carousel .card .img {
