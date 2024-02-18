@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>My personal Website</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+
+  <!--headerdesign-->
+  <header class="header">
+
+    <div class="topnav">
+      <a href="#home">Logo</a>
+      <div id="myLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars">=</i>
+      </a>
+    </div>
+
+  </header>
+
+  <!--home section design-->
+
+  <!--about section describe-->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="v5.png" alt="">
+      <sapn class="circle-span"></sapn>
+    </div>
+
+    <div class="about-content">
+      <h2 class="heading">About <span>US</span></h2>
+      <h3>Engineering Solutions</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo debitis rerum veritatis porro molestias.
+        Sint illo libero aut ut inventore doloribus architecto totam culpa aliquid.</p>
+    </div>
+  </section>
+
+
+  <!--educations-->
+
+  <!--certificates-->
+  <section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h3>Web Developments</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Iure ipsam incidunt facere dolor cupiditate recusandae reiciendis inventore dignissimos repellat accusamus,
+          vel accusantium obcaecati modi nam temporibus non eligendi sit harum.</p>
+        <a href="#contact" class="btn">Contact US</a>
+      </div>
+
+      <div class="services-box">
+        <i class="bx bxs-paint"></i>
+        <h3>Graphics Design</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Iure ipsam incidunt facere dolor cupiditate recusandae reiciendis inventore dignissimos repellat accusamus,
+          vel accusantium obcaecati modi nam temporibus non eligendi sit harum.</p>
+        <a href="#contact" class="btn">Contact US</a>
+      </div>
+      <div class="services-box">
+        <i class="bx bx-bar-chart-alt"></i>
+        <h3>Digital Markting</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Iure ipsam incidunt facere dolor cupiditate recusandae reiciendis inventore dignissimos repellat accusamus,
+          vel accusantium obcaecati modi nam temporibus non eligendi sit harum.</p>
+        <a href="#contact" class="btn">Contact US</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  </section>
+
+
+
+
+  <!--Portfolio-->
+
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="v3.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Designer</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis, ex blanditiis alias ipsam
+            adipisci quis rerum beatae dolorum praesentium? Accusamus nesciunt fugiat velit et nisi aperiam provident
+            opt</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+
+      <div class="portfolio-box">
+        <img src="p5.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Designer</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis, ex blanditiis alias ipsam
+            adipisci quis rerum beatae dolorum praesentium? Accusamus nesciunt fugiat velit et nisi aperiam provident
+            opt</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!--skills-->
+  <section class="skills" id="skills">
+    <h2 class="heading">Our <span>Team</span></h2>
+    <iframe src="7.html" frameborder="0"></iframe>
+  </section>
+  <!--contact-->
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form action="#">
+      <div class="input-box">
+        <div class="input-field">
+          <input type="text" placeholder="full Name" required>
+          <span class="focus"></span>
+        </div>
+        <div class="input-field">
+          <input type="email" placeholder="Email Address" required>
+          <span class="focus"></span>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="input-field">
+          <input type="text" placeholder="full Name" required>
+          <span class="focus"></span>
+        </div>
+        <div class="input-field">
+          <input type="email" placeholder="Email Address" required>
+          <span class="focus"></span>
+        </div>
+      </div>
+      <div class="textarea-field">
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      </div>
+      <div class="btn-box">
+
+        <input type="submit" value="send message" class="btn">
+      </div>
+
+    </form>
+
+  </section>
+
+  <!--footer-->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2023 | All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-iconTop">
+      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+  <!--scroll-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!--typed js-->
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
