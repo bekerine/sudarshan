@@ -15,6 +15,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: #1F242D;
+  color: white;
 }
 
 .wrapper {
@@ -37,6 +38,7 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
+  color: black;
 }
 
 .wrapper i:active {
