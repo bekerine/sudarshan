@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>My personal Website</title>
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            position: relative;
+        }
+
+        .topnav #myLinks {
+            display: none;
+        }
+
+        .topnav a {
+            float: left;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .topnav a.icon {
+            float: right;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        :root {
+            --bg-color: #1f242d;
+            --second-bg-color: #323946;
+            --text-color: #fff;
+            --main-color: #0ef;
+
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
+
+        .header {
+            position: fixed;
+            width: 100%;
+            background: var(--bg-color);
+            z-index: 100;
+        }
+
+        .header.sticky {
+            border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            right: 50px;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: default;
+
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            color: var(--text-color);
+            margin-left: 4rem;
+
+
+        }
+
+        .navbar a:hover,
+
+        .home {
+            color: var(--text-color)
+        }
+
+        #menu-icon {
+            font-size: 3.6rem;
+            color: var(--text-color);
+            cursor: pointer;
+            display: none;
+
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-img {
+            width: 20rem;
+            animation: floatImage 4s ease-in-out infinite;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-2.4rem);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+        .home-content h3 {
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+
+        .home-content h3:nth-of-type(2) {
+            margin-bottom: 2rem;
+        }
+
+        span {
+            color: var(--main-color);
+        }
+
+        .home-content h1 {
+            font-size: 5.6rem;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .home-content p {
+            font-size: 1.6rem;
+            margin: 20px 0 40px;
+        }
+
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            background: transparent;
+            border: .2rem solid var(--main-color);
+            border-radius: 50%;
+            font-size: 2rem;
+            color: var(--main-color);
+            margin: 3rem 1.5rem 3rem 0;
+            transition: .5s ease;
+
+        }
+
+        .social-media a:hover {
+            background: var(--main-color);
+            color: var(--second-bg-color);
+            box-shadow: 0 0 1rem var(--main-color);
+        }
+
+        .home-content .social-media {
+            margin: 20px 0 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background: var(--main-color);
+            border-radius: 4rem;
+            box-shadow: 0 0 1rem var(--main-color);
+            font-size: 1.6rem;
+            color: var(--second-bg-color);
+            letter-spacing: .1rem;
+            font-weight: 600;
+            transition: .5s ease;
+
+
+        }
+
+
+        .btn:hover {
+            box-shadow: none;
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            background: var(--second-bg-color);
+
+        }
+
+        span {
+            color: var(--main-color);
+        }
+
+        .about-img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: cneter;
+
+
+        }
+
+        .about-img img {
+            border-radius: 100%;
+            border: .2rem solid var(--main-color);
+            width: 90%;
+
+        }
+
+
+
+        .heading {
+            text-align: center;
+            font-size: 4.5rem;
+        }
+
+
+        .about-content h2 {
+            text-align: left;
+            line-height: 1.2;
+        }
+
+        .about-content h3 {
+            font-size: 2.6rem;
+        }
+
+        .about-content p {
+            font-size: 1.6rem;
+            margin: 2rem 0 3rem;
+        }
+
+        .services h2 {
+            margin-bottom: 5rem;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .services-container .services-box {
+            flex: 1 1 30rem;
+            background: var(--second-bg-color);
+            padding: 3rem 2rem 4rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: .3rem solid var(--bg-color);
+            transition: .5s ease;
+
+        }
+
+        .services-container .services-box:hover {
+            border-color: var(--main-color);
+            transform: scale(1.02);
+        }
+
+
+        .services-box i {
+            font-size: 7rem;
+            color: var(--main-color)
+        }
+
+
+        .services-box h3 {
+            font-size: 2.6rem;
+        }
+
+        .services-box p {
+            font-size: 1.6rem;
+            margin: 1rem 0 3rem;
+        }
+
+        .portfolio {
+            background: var(--second-bg-color);
+        }
+
+        .portfolio h2 {
+            margin-bottom: 4rem;
+        }
+
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .portfolio-container .portfolio-box {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem var(--bg-color);
+            overflow: hidden;
+            display: flex;
+
+
+        }
+
+
+
+        .portfolio-box img {
+            width: 100%;
+            transition: .5s ease;
+        }
+
+        .portfolio-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-box .portfolio-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+        }
+
+        .portfolio-box:hover .portfolio-layer {
+            transform: translateY(0);
+        }
+
+        .portfolio-layer h4 {
+            font-size: 3rem;
+        }
+
+        .portfolio-layer p {
+            font-size: 1.6rem;
+            margin: .3rem 0 1rem;
+
+        }
+
+        .portfolio-layer a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            background: var(--text-color);
+            border: radius 50%;
+        }
+
+        .portfolio-layer a i {
+            font-size: 2rem;
+            color: var(--second-bg-color);
+
+        }
+
+
+        .skills {
+            min-height: auto;
+            padding-bottom: 7rem;
+            background-color: var(--second-bg-color);
+        }
+
+        .skills .skills-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5rem;
+        }
+
+        .skills-row .skills-column {
+            flex: 1 1 40rem;
+        }
+
+
+        .skills-column {
+            font-size: 2.5rem;
+            margin: 0 0 1.5rem;
+        }
+
+        .skills-box .skills-content {
+            position: relative;
+            border: .2rem solid var(--main-color);
+            border-radius: .6rem;
+            padding: .5rem 1.5rem;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .skills-box .skills-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            z-index: -1;
+        }
+
+        .skills-content .progress h3 {
+            font-size: 1.7rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skills-content .progress h3 span {
+            color: var(--text-color);
+
+        }
+
+        .skills-content .progress .bar {
+            height: 2.5rem;
+            border-radius: .6rem;
+            border: .2rem solid var(--main-color);
+            padding: .5rem;
+            margin: 1rem 0;
+        }
+
+
+        .skills-content .progress .bar span {
+            display: block;
+            height: 100%;
+            border-radius: .3rem;
+            background: var(--main-color);
+        }
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+            width: 90%;
+        }
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+            width: 80%;
+        }
+
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+            width: 70%;
+        }
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+            width: 80%;
+        }
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+            width: 85%;
+        }
+
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
+            width: 90%;
+        }
+
+
+        .skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
+            width: 80%;
+        }
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+            width: 75%;
+        }
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+            width: 60%;
+        }
+
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+            width: 80%;
+        }
+
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+            width: 80%;
+        }
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
+            width: 75%;
+        }
+
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span {
+            width: 95%;
+        }
+
+        .skills-column:nth-child(2) .skills-content .progress:nth-child(7) .bar span {
+            width: 95%;
+        }
+
+        .contact {
+            min-height: auto;
+            padding-bottom: 7rem;
+        }
+
+
+        .contact from {
+            max-width: 70rem;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+        .contact form .input-box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact form .input-box .input-field {
+
+            width: 49%;
+            margin: .8rem 0;
+        }
+
+        .contact form .input-box .input-field input,
+        .contact form .textarea-field textarea {
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            background: var(--second-bg-color);
+            border-radius: .8rem;
+            margin: .7rem 0;
+            border: .2rem solid var(--main-color);
+
+        }
+
+
+        .contact form .textarea-field textarea {
+            resize: none;
+        }
+
+        .contact form .btn-box {
+            margin: 2rem;
+            cursor: pointer;
+            text-align: center;
+        }
+
+
+
+
+
+        @media (max-width:1200px) {
+            html {
+                font-size: 55%;
+            }
+        }
+
+
+        @media (max-width:991px) {
+            .header {
+                padding: 2rem 3%;
+            }
+
+            section {
+                padding: 10rem 3% 2rem;
+            }
+
+            .services {
+                padding-bottom: 7rem;
+            }
+
+        }
+
+        /* @media (max-width:768px){
+  #menu-icon{
+    display:block;
+  } */
+
+        /* .navbar{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    padding:1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0,0,0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+    display: none;
+  
+    
+  }
+  .navbar .active{
+    display: inline-block;
+  }
+
+  
+  .navbar a{
+        display:block;
+        font-size: 10px;
+        margin: 3rem 0;
+  }
+}
+  */
+        .home {
+            flex-direction: column;
+        }
+
+        .home-content h3 {
+            font-size: 2.6rem;
+        }
+
+        .home-content h1 {
+            font-size: 5rem;
+        }
+
+        /* .home-img img {
+      width: 70vw;
+      margin-top: 4rem;
+    } */
+
+        .about {
+            flex-direction: column-reverse;
+        }
+
+        .about-img {
+            width: 70vw;
+            margin-top: 4rem;
+        }
+
+        .services h2 {
+            margin-bottom: 3rem;
+        }
+
+        .homeimg {
+            width: 20rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--box icons-->
+
+
+
+
+    <!--headerdesign-->
+    <header class="header">
+
+        <div class="topnav">
+            <a href="#home">Logo</a>
+            <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars">=</i>
+            </a>
+        </div>
+
+    </header>
+
+    <!--home section design-->
+    <section class="home" id="home">
+        <div class="home-content">
+
+            <h1>Cloud Computing</h1>
+
+            <p>Certainly! Cloud computing refers to the practice of storing and accessing data and programs on remote
+                servers hosted on the internet, rather than on a local computer’s hard drive or local server. Here are
+                some key points about cloud computing:</p>
+
+            <img src="1.jpeg" alt="" srcset="" class="home-img">
+
+
+
+            <!-- <div class="social-media">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+      </div> -->
+            <a href="meeting.html" class="btn">Book A Meeting</a>
+        </div>
+        <!-- <div class="home-img">
+      <img src="v5.png" alt="">
+      <span class="home-imgHover"></span>
+    </div> -->
+
+
+    </section>
+
+    <!--about section describe-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="v5.png" alt="">
+            <sapn class="circle-span"></sapn>
+        </div>
+
+        <div class="about-content">
+
+            <h3>Why use Cloud Computing</h3>
+            <p>Certainly! Cloud computing offers several compelling reasons for businesses and individuals to adopt it:
+            </p>
+
+            <ol>
+
+                <li>
+                    <h3>Performance Enhancement:</h3>
+                    <ul>
+                        <li>
+                            <p>Cloud providers continually enhance network bandwidths for multiple users.</p>
+                        </li>
+                        <li>
+                            <p>Faster access to resources improves overall system performance.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Data and Application Accessibility:</h3>
+                    <ul>
+                        <li>
+                            <p>Cloud services allow remote access to data and applications from anywhere.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Collaboration becomes seamless, enabling productivity across geographies.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Scalability and Flexibility</h3>
+                    <ul>
+                        <li>
+                            <p>Cloud solutions easily scale up or down based on demand.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Businesses can adapt to changing needs without major infrastructure adjustments.</p>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <p></p>
+            <!-- <a href="#" class="btn">Read More</a> -->
+        </div>
+    </section>
+
+
+    <!--educations-->
+
+    <!--certificates-->
+    <section class="services" id="services">
+        <h2 class="heading">How Cloud Computing Increase Productivity</h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="bx bx-code-alt"></i>
+                <h3>Cost Efficiency:</h3>
+                <ul>
+                    <li>
+                        <p>Cloud computing operates on a pay-as-you-go pricing model.</p>
+                    </li>
+                    <li>
+                        <p>Organizations only pay for the resources they actually use, avoiding upfront infrastructure costs.</p>
+                    </li>
+                    <li>
+                        <p>This cost efficiency allows businesses to allocate resources more effectively and invest in other areas.</p>
+                    </li>
+                </ul>
+                <!-- <a href="#" class="btn">Read More</a> -->
+                <img src="1.jpeg" alt="" srcset="" class="homeimg">
+            </div>
+
+            <div class="services-box">
+                <i class="bx bxs-paint"></i>
+                <h3>Scalability and Flexibility:</h3>
+                <ul>
+                    <li>
+                        <p>Cloud solutions can easily scale up or down based on demand.</p>
+                    </li>
+                    <li>
+                        <p>This flexibility ensures that resources are available when needed, enhancing productivity.</p>
+                    </li>
+                    <li>
+                        <p>Businesses can adapt to changing needs without major infrastructure adjustments.</p>
+                    </li>
+                </ul>
+                <!-- <a href="#" class="btn">Read More</a> -->
+                <img src="1.jpeg" alt="" srcset="" class="homeimg">
+            </div>
+
+            <div class="services-box">
+                <i class="bx bx-bar-chart-alt"></i>
+                <h4>Remote Access and Collaboration:</h4>
+                <ul>
+                    <li>
+                        <p>This accessibility improves productivity by enabling work from various locations.</p>
+                    </li>
+                    <li>
+                        <p>Cloud services allow remote access to data and applications from anywhere.</p>
+                    </li>
+                    <li>
+                        <p>Teams can collaborate seamlessly, even if they are geographically dispersed.</p>
+                    </li>
+                </ul>
+                <!-- <a href="#" class="btn">Read More</a> -->
+                <img src="1.jpeg" alt="" srcset="" class="homeimg">
+            </div>
+
+        </div>
+        </div>
+    </section>
+    </section>
+
+
+
+
+    <!--Portfolio-->
+
+    <!-- <section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="v3.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Designer</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis, ex blanditiis alias ipsam
+            adipisci quis rerum beatae dolorum praesentium? Accusamus nesciunt fugiat velit et nisi aperiam provident
+            opt</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+
+      <div class="portfolio-box">
+        <img src="p5.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Designer</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis, ex blanditiis alias ipsam
+            adipisci quis rerum beatae dolorum praesentium? Accusamus nesciunt fugiat velit et nisi aperiam provident
+            opt</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+    </div>
+
+  </section> -->
+
+
+    <!--skills-->
+    <!-- <section class="skills" id="skills">
+    <h2 class="heading">My <span>skills</span></h2>
+    <div class="skills-row">
+      <div class="skills-column">
+        <h3 class="title">Programming Skills</h3>
+
+        <div class="skills-box">
+          <div class="skills-content">
+            <div class="progress">
+              <h3>HTML <span>90%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>CSS <span>80%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>JavaScript <span>70%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>C <span>80%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>C++ <span>85%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>Python <span>90%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>SQL <span>80%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="skills-column">
+        <h3 class="title">Miscellaneous</h3>
+        <div class="skills-box">
+          <div class="skills-content">
+            <div class="progress">
+              <h3>Object Oriented Programming <span>75%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>Data structure <span>60%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+
+            <div class="progress">
+              <h3>DBMS <span>80%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>Linux(OS) <span>80%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>Data Warehousing <span>75%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>Informatica PowerCenter <span>95%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+            <div class="progress">
+              <h3>Machine Learning <span>95%</span>
+              </h3>
+              <div class="bar"><span></span></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+    <!--contact-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email Address" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="phone" placeholder="Phone Number" required>
+                    <span class="focus"></span>
+                </div>
+                <!-- <div class="input-field">
+          <input type="email" placeholder="Email Address" required>
+          <span class="focus"></span>
+        </div> -->
+            </div>
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            </div>
+            <div class="btn-box">
+
+                <input type="submit" value="send message" class="btn">
+            </div>
+
+        </form>
+
+    </section>
+
+    <!--footer-->
+
+    <footer>
+
+        <div class="footer">
+            <div class="section logo">
+                <img src="logo.jpeg" alt="Company Logo">
+                <h5>Techstride Consultencing</h5>
+            </div>
+
+            <div class="section">
+                <h3>Services</h3>
+                <a href="#">Data Science</a><br>
+                <a href="#">Data Analytics</a><br>
+                <a href="#">Full Stack Development</a><br>
+                <a href="#">Cyber Security</a><br>
+                <a href="#">Cloud Computing</a><br>
+                <a href="#">Web Development</a><br>
+            </div>
+
+            <div class="section">
+                <h3>Company</h3>
+                <a href="#">More Abou Us</a><br>
+                <!-- <a href="#">Blogs</a><br> -->
+                <!-- Add more links as needed -->
+            </div>
+            <div class="section">
+                <h3>Policies</h3>
+                <a href="#">Privacy Policy</a><br>
+                <!-- <a href="#">Return Policy</a><br> -->
+                <!-- <a href="#">Saales Policy</a><br> -->
+                <a href="#">Company Policy</a><br>
+                <!-- Add more links as needed -->
+            </div>
+            <div class="section">
+                <h3>Contacts</h3>
+                <a href="#"><img src="mail.svg" alt="" srcset=""></a><br>
+                <a href="tel:+917819055044"><img src="phone.svg" alt="" srcset=""></a><br>
+                <a href="#"><img src="whatsapp.svg" alt="" srcset=""></a><br>
+                <a href="#"><img src="telegram.svg" alt="" srcset=""></a><br>
+                <!-- Add more links as needed -->
+            </div>
+
+            <!-- social media start -->
+            <div class="social-media">
+
+                <div class="footer-social-links">
+                    <!-- <a href="https://t.me/+OrTk6UBXiRFkOTA1" title="Facebook" target="_blank"><i class="fa fa-telegram"></i></a> -->
+                    <a href="#" title="Twitter" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <!-- <a href="#" title="Google+" target="_blank"><i class="fa fa-youtube"></i></a> -->
+                    <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" title="Dribbble" target="_blank"><i class="fa fa-google"></i></a>
+                </div>
+
+            </div>
+            <!-- social media end -->
+
+            <!-- <span> © copyright 2024 <a href="#">contact the developer</a></span> -->
+        </div>
+
+    </footer>
+
+    <!--scroll-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--typed js-->
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
