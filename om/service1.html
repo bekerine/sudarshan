@@ -3,1133 +3,273 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <title>My personal Website</title>
-  <link rel="stylesheet" href="footer.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-    * {
+    body {
+      background-color: white;
+      color: black;
+      font-size: 1.5rem;
+      line-height: 1.5;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      text-decoration: none;
-      border: none;
-      outline: none;
-      scroll-behavior: smooth;
-      font-family: 'Poppins', sans-serif;
     }
 
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
+    h1 {
+      text-align: center;
+      color: #2F4D5A;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .a {
+      margin: auto;
+    }
+
+    main {
+      margin: 1rem;
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 100%;
       position: relative;
+      margin: auto;
     }
 
-    .topnav #myLinks {
-      display: none;
-    }
-
-    .topnav a {
-      float: left;
-      color: white;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    .topnav a.icon {
-      float: right;
-    }
-
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    :root {
-      --bg-color: #1f242d;
-      --second-bg-color: #323946;
-      --text-color: #fff;
-      --main-color: #0ef;
-
-    }
-
-    html {
-      font-size: 62.5%;
-      overflow-x: hidden;
-    }
-
-    body {
-      background: var(--bg-color);
-      color: var(--text-color);
-    }
-
-    section {
-      min-height: 100vh;
-      padding: 10rem 9% 2rem;
-    }
-
-    .header {
-      position: fixed;
-      width: 100%;
-      background: var(--bg-color);
-      z-index: 100;
-    }
-
-    .header.sticky {
-      border-bottom: .1rem solid rgba(0, 0, 0, .2);
-    }
-
-    .logo {
-      font-size: 2.5rem;
-      right: 50px;
-      color: var(--text-color);
-      font-weight: 600;
-      cursor: default;
-
-    }
-
-    .navbar a {
-      font-size: 1.7rem;
-      color: var(--text-color);
-      margin-left: 4rem;
-
-
-    }
-
-    .navbar a:hover,
-
-    .home {
-      color: var(--text-color)
-    }
-
-    #menu-icon {
-      font-size: 3.6rem;
-      color: var(--text-color);
+    /* Next & previous buttons */
+    .prev,
+    .next {
       cursor: pointer;
-      display: none;
-
-    }
-
-    .home {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .home-img {
-      width: 20rem;
-      animation: floatImage 4s ease-in-out infinite;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-    }
-
-    @keyframes floatImage {
-      0% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-2.4rem);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-
-    .home-content h3 {
-      font-size: 3.2rem;
-      font-weight: 700;
-    }
-
-    .home-content h3:nth-of-type(2) {
-      margin-bottom: 2rem;
-    }
-
-    span {
-      color: var(--main-color);
-    }
-
-    .home-content h1 {
-      font-size: 5.6rem;
-      font-weight: 500;
-      line-height: 1.3;
-    }
-
-    .home-content p {
-      font-size: 1.6rem;
-      margin: 20px 0 40px;
-    }
-
-    .social-media a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 4rem;
-      height: 4rem;
-      background: transparent;
-      border: .2rem solid var(--main-color);
-      border-radius: 50%;
-      font-size: 2rem;
-      color: var(--main-color);
-      margin: 3rem 1.5rem 3rem 0;
-      transition: .5s ease;
-
-    }
-
-    .social-media a:hover {
-      background: var(--main-color);
-      color: var(--second-bg-color);
-      box-shadow: 0 0 1rem var(--main-color);
-    }
-
-    .home-content .social-media {
-      margin: 20px 0 40px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 1rem 2.8rem;
-      background: var(--main-color);
-      border-radius: 4rem;
-      box-shadow: 0 0 1rem var(--main-color);
-      font-size: 1.6rem;
-      color: var(--second-bg-color);
-      letter-spacing: .1rem;
-      font-weight: 600;
-      transition: .5s ease;
-
-
-    }
-
-
-    .btn:hover {
-      box-shadow: none;
-    }
-
-    .about {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      background: var(--second-bg-color);
-
-    }
-
-    span {
-      color: var(--main-color);
-    }
-
-    .about-img {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      border-radius: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: cneter;
-
-
-    }
-
-    .about-img img {
-      border-radius: 100%;
-      border: .2rem solid var(--main-color);
-      width: 90%;
-
-    }
-
-
-
-    .heading {
-      text-align: center;
-      font-size: 4.5rem;
-    }
-
-
-    .about-content h2 {
-      text-align: left;
-      line-height: 1.2;
-    }
-
-    .about-content h3 {
-      font-size: 2.6rem;
-    }
-
-    .about-content p {
-      font-size: 1.6rem;
-      margin: 2rem 0 3rem;
-    }
-
-    .services h2 {
-      margin-bottom: 5rem;
-    }
-
-    .services-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .services-container .services-box {
-      flex: 1 1 30rem;
-      background: var(--second-bg-color);
-      padding: 3rem 2rem 4rem;
-      border-radius: 2rem;
-      text-align: center;
-      border: .3rem solid var(--bg-color);
-      transition: .5s ease;
-
-    }
-
-    .services-container .services-box:hover {
-      border-color: var(--main-color);
-      transform: scale(1.02);
-    }
-
-
-    .services-box i {
-      font-size: 7rem;
-      color: var(--main-color)
-    }
-
-
-    .services-box h3 {
-      font-size: 2.6rem;
-    }
-
-    .services-box p {
-      font-size: 1.6rem;
-      margin: 1rem 0 3rem;
-    }
-
-    .portfolio {
-      background: var(--second-bg-color);
-    }
-
-    .portfolio h2 {
-      margin-bottom: 4rem;
-    }
-
-    .portfolio-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: center;
-      gap: 2.5rem;
-    }
-
-    .portfolio-container .portfolio-box {
-      position: relative;
-      border-radius: 2rem;
-      box-shadow: 0 0 1rem var(--bg-color);
-      overflow: hidden;
-      display: flex;
-
-
-    }
-
-
-
-    .portfolio-box img {
-      width: 100%;
-      transition: .5s ease;
-    }
-
-    .portfolio-box:hover img {
-      transform: scale(1.1);
-    }
-
-    .portfolio-box .portfolio-layer {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100;
-      height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 0 4rem;
-      transform: translateY(100%);
-      transition: .5s ease;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
     }
 
-    .portfolio-box:hover .portfolio-layer {
-      transform: translateY(0);
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
     }
 
-    .portfolio-layer h4 {
-      font-size: 3rem;
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .portfolio-layer p {
-      font-size: 1.6rem;
-      margin: .3rem 0 1rem;
-
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      background-color: black;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 98%;
+      text-align: center;
     }
 
-    .portfolio-layer a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 5rem;
-      height: 5rem;
-      background: var(--text-color);
-      border: radius 50%;
-    }
-
-    .portfolio-layer a i {
-      font-size: 2rem;
-      color: var(--second-bg-color);
-
-    }
-
-
-    .skills {
-      min-height: auto;
-      padding-bottom: 7rem;
-      background-color: var(--second-bg-color);
-    }
-
-    .skills .skills-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5rem;
-    }
-
-    .skills-row .skills-column {
-      flex: 1 1 40rem;
-    }
-
-
-    .skills-column {
-      font-size: 2.5rem;
-      margin: 0 0 1.5rem;
-    }
-
-    .skills-box .skills-content {
-      position: relative;
-      border: .2rem solid var(--main-color);
-      border-radius: .6rem;
-      padding: .5rem 1.5rem;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    .skills-box .skills-content::before {
-      content: '';
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--bg-color);
-      z-index: -1;
     }
 
-    .skills-content .progress h3 {
-      font-size: 1.7rem;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .skills-content .progress h3 span {
-      color: var(--text-color);
-
-    }
-
-    .skills-content .progress .bar {
-      height: 2.5rem;
-      border-radius: .6rem;
-      border: .2rem solid var(--main-color);
-      padding: .5rem;
-      margin: 1rem 0;
-    }
-
-
-    .skills-content .progress .bar span {
-      display: block;
-      height: 100%;
-      border-radius: .3rem;
-      background: var(--main-color);
-    }
-
-    .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-      width: 90%;
-    }
-
-    .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-      width: 80%;
-    }
-
-
-    .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-      width: 70%;
-    }
-
-    .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-      width: 80%;
-    }
-
-    .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
-      width: 85%;
-    }
-
-
-    .skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
-      width: 90%;
-    }
-
-
-    .skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
-      width: 80%;
-    }
-
-    .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-      width: 75%;
-    }
-
-    .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-      width: 60%;
-    }
-
-
-    .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-      width: 80%;
-    }
-
-
-    .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-      width: 80%;
-    }
-
-    .skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
-      width: 75%;
-    }
-
-
-    .skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span {
-      width: 95%;
-    }
-
-    .skills-column:nth-child(2) .skills-content .progress:nth-child(7) .bar span {
-      width: 95%;
-    }
-
-    .contact {
-      min-height: auto;
-      padding-bottom: 7rem;
-    }
-
-
-    .contact from {
-      max-width: 70rem;
-      margin: 0 auto;
-      text-align: center;
-
-    }
-
-    .contact form .input-box {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .contact form .input-box .input-field {
-
-      width: 49%;
-      margin: .8rem 0;
-    }
-
-    .contact form .input-box .input-field input,
-    .contact form .textarea-field textarea {
-      width: 100%;
-      padding: 1.5rem;
-      font-size: 1.6rem;
-      color: var(--text-color);
-      background: var(--second-bg-color);
-      border-radius: .8rem;
-      margin: .7rem 0;
-      border: .2rem solid var(--main-color);
-
-    }
-
-
-    .contact form .textarea-field textarea {
-      resize: none;
-    }
-
-    .contact form .btn-box {
-      margin: 2rem;
+    /* The dots/bullets/indicators */
+    .dot {
       cursor: pointer;
-      text-align: center;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
     }
 
-    
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
 
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
 
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
 
-    @media (max-width:1200px) {
-      html {
-        font-size: 55%;
+      to {
+        opacity: 1
       }
     }
 
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
 
-    @media (max-width:991px) {
-      .header {
-        padding: 2rem 3%;
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
       }
-
-      section {
-        padding: 10rem 3% 2rem;
-      }
-
-      .services {
-        padding-bottom: 7rem;
-      }
-
     }
 
-    /* @media (max-width:768px){
-  #menu-icon{
-    display:block;
-  } */
-
-    /* .navbar{
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    padding:1rem 3%;
-    background: var(--bg-color);
-    border-top: .1rem solid rgba(0,0,0, .2);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-    display: none;
-  
-    
-  }
-  .navbar .active{
-    display: inline-block;
-  }
-
-  
-  .navbar a{
-        display:block;
-        font-size: 10px;
-        margin: 3rem 0;
-  }
+    .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 10px;
 }
-  */
-    .home {
-      flex-direction: column;
-    }
-
-    .home-content h3 {
-      font-size: 2.6rem;
-    }
-
-    .home-content h1 {
-      font-size: 5rem;
-    }
-
-    /* .home-img img {
-      width: 70vw;
-      margin-top: 4rem;
-    } */
-
-    .about {
-      flex-direction: column-reverse;
-    }
-
-    .about-img {
-      width: 70vw;
-      margin-top: 4rem;
-    }
-
-    .services h2 {
-      margin-bottom: 3rem;
-    }
-
-    .homeimg {
-      width: 20rem;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      margin-top: 1rem;
-    }
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
   </style>
 </head>
 
 <body>
-  <!--box icons-->
-
-
-
-
-  <!--headerdesign-->
-  <header class="header">
-
-    <div class="topnav">
-      <a href="#home">Logo</a>
-      <div id="myLinks">
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars">=</i>
-      </a>
+  <main>
+    <div class="a">
+      <h1>Cloud Computing</h1>
+      <p>Cloud Computing means storing and accessing the data and programs on remote servers that are hosted on the
+        internet instead of the computer’s hard drive or local server. Cloud computing is also referred to as
+        Internet-based computing, it is a technology where the resource is provided as a service through the Internet to
+        the user. The data that is stored can be files, images, documents, or any other storable document.</p>
+      <p>The following are some of the Operations that can be performed with Cloud Computing</p>
+      <ul>
+        <li>Storage, backup, and recovery of data.</li>
+        <li>Delivery of software on demand.</li>
+        <li>Development of new applications and services.</li>
+        <li>Streaming videos and audio.</li>
+      </ul>
     </div>
 
-  </header>
+    <div class="b">
+      <h1>How Cloud Computing Helps Business</h1>
+      <p>Cloud computing has become an essential tool for businesses, offering a range of benefits that contribute to
+        growth and efficiency. Here are some ways cloud computing helps businesses:</p>
+      <div class="slideshow-container">
 
-  <!--home section design-->
-  <section class="home" id="home">
-    <div class="home-content">
-
-      <h1>Data Science</h1>
-
-      <p>Data science is an interdisciplinary field that combines mathematics, statistics, computer science, and domain
-        expertise to extract valuable insights from data. It involves techniques and theories drawn from various
-        disciplines, including scientific computing, information science, and machine learning. Data scientists work
-        with both structured and unstructured data, using specialized programming, advanced analytics, and artificial
-        intelligence (AI) to uncover hidden patterns and trends. The data science lifecycle encompasses stages such as
-        data ingestion, data storage, data processing, data analysis, and communication of insights. By interpreting
-        data, data scientists provide actionable recommendations to guide decision-making and strategic planning in
-        organizations.</p>
-
-      <img src="1.jpeg" alt="" srcset="" class="home-img">
-
-      <p>In essence, data scientists construct questions around specific data sets, apply statistical methods, and use
-        data analytics to find patterns. They create predictive models and develop insights that drive informed business
-        decisions. Much like marine biologists study sea-dwelling life forms, data scientists explore the vast ocean of
-        data to reveal meaningful knowledge that shapes the future of businesses</p>
-
-
-
-      <!-- <div class="social-media">
-        <a href="#"><i class='bx bxl-facebook'></i></a>
-        <a href="#"><i class='bx bxl-twitter'></i></a>
-        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-        <a href="#"><i class="bx bxl-linkedin"></i></a>
-      </div> -->
-      <a href="meeting.html" class="btn">Book A Meeting</a>
-    </div>
-    <!-- <div class="home-img">
-      <img src="v5.png" alt="">
-      <span class="home-imgHover"></span>
-    </div> -->
-
-
-  </section>
-
-  <!--about section describe-->
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="v5.png" alt="">
-      <sapn class="circle-span"></sapn>
-    </div>
-
-    <div class="about-content">
-
-      <h3>Why use Data Science</h3>
-      <p>Data science plays a pivotal role in today’s data-driven world. Here are some compelling reasons why we use
-        data science:</p>
-
-      <ol>
-
-        <li>
-          <h4>Decision-Making:</h4> Data science enables informed decision-making by extracting valuable insights from
-          large and
-          complex data sets. Organizations can use these insights to optimize processes, allocate resources efficiently,
-          and enhance overall performance.
-        </li>
-        <li>
-          <h4>Predictive Analytics:</h4>By analyzing historical data, data science allows us to build predictive models.
-          These
-          models help forecast future trends, customer behavior, market dynamics, and potential risks. Businesses can
-          proactively address challenges and seize opportunities.
-        </li>
-        <li>
-          <h4>Personalization:</h4> Data science powers personalized experiences. Whether it’s recommending products on
-          an
-          e-commerce platform or tailoring content for users, data-driven personalization enhances customer satisfaction
-          and engagement.
-        </li>
-        <li>
-          <h4>Risk Management:</h4> Financial institutions, insurance companies, and healthcare providers rely on data
-          science to
-          assess risks. By analyzing patterns and anomalies, they can mitigate potential threats and make informed
-          decisions.
-        </li>
-        <li>
-          <h4>Healthcare and Research:</h4> Data science aids medical research, drug discovery, and patient care. It
-          helps identify
-          disease patterns, optimize treatment plans, and predict outbreaks. Researchers can analyze genomics data,
-          clinical records, and epidemiological trends.
-        </li>
-        <li>
-          <h4>Marketing and Customer Insights:</h4> Marketers leverage data science to understand consumer behavior,
-          segment
-          audiences, and optimize marketing campaigns. Customer insights drive targeted advertising, customer retention
-          strategies, and brand loyalty.
-        </li>
-        <li>
-          <h4>Supply Chain Optimization:</h4> Data science optimizes supply chains by predicting demand, managing
-          inventory, and
-          improving logistics. Efficient supply chains reduce costs, minimize waste, and enhance overall productivity.
-        </li>
-        <li>
-          <h4>Fraud Detection:</h4> Financial institutions and e-commerce platforms use data science to detect
-          fraudulent
-          activities. Machine learning algorithms analyze transaction patterns, identify anomalies, and prevent
-          unauthorized transactions.
-        </li>
-        <li>
-          <h4>Natural Language Processing (NLP):</h4> NLP techniques enable sentiment analysis, chatbots, and language
-          translation.
-          They enhance communication, automate customer support, and improve user experiences.
-        </li>
-        <li>
-          <h4>Exploration and Discovery:</h4> Data science fosters curiosity and exploration. Researchers, scientists,
-          and analysts
-          delve into data to uncover hidden patterns, validate hypotheses, and contribute to scientific advancements.
-        </li>
-      </ol>
-      <p>In summary, data science empowers us to harness the vast amount of data available, transforming it into
-        actionable insights that drive progress across various domains .</p>
-      <!-- <a href="#" class="btn">Read More</a> -->
-    </div>
-  </section>
-
-
-  <!--educations-->
-
-  <!--certificates-->
-  <section class="services" id="services">
-    <h2 class="heading">How Data Science Increase Productivity</h2>
-    <div class="services-container">
-      <div class="services-box">
-        <i class="bx bx-code-alt"></i>
-        <h3>Data-Driven Decision-Making</h3>
-        <ol>
-          <li>
-            <h4>Efficient Teams and Schedules:</h4> Implementing data-driven insights allows businesses to optimize team
-            structures and work schedules. By analyzing historical data, organizations can identify peak productivity
-            hours and allocate tasks accordingly.
-          </li>
-          <li>
-            <h4>Training Your Team to Solve Problems:</h4> Regular training equips data science teams with
-            problem-solving skills.
-            This ensures efficient handling of complex tasks and promotes productivity.
-          </li>
-          <li>
-            <h4>Provide the ‘Right’ Equipment and Tools:</h4> Equipping data scientists with the necessary tools (such
-            as robust
-            software, hardware, and cloud resources) enhances their productivity. Access to cutting-edge technology
-            streamlines tasks and accelerates results.
-          </li>
-        </ol>
-        <!-- <a href="#" class="btn">Read More</a> -->
-        <img src="1.jpeg" alt="" srcset="" class="homeimg">
-      </div>
-
-      <div class="services-box">
-        <i class="bx bxs-paint"></i>
-        <h3>Data Creation and Capture</h3>
-        <ol>
-          <li>
-            <h4>Real-Time Reporting: </h4> For customer-centric businesses, real-time reporting powered by data science
-            significantly improves efficiency. Service representatives gain instant access to caller information,
-            reducing call times and enhancing overall customer experience.
-          </li>
-          <li>
-            <h4>Learning from Historical Data:</h4> Analyzing past customer behavior helps predict future patterns.
-            Proper staffing during peak times and personalized interactions contribute to productivity.
-          </li>
-        </ol>
-        <!-- <a href="#" class="btn">Read More</a> -->
-        <img src="1.jpeg" alt="" srcset="" class="homeimg">
-      </div>
-
-      <div class="services-box">
-        <i class="bx bx-bar-chart-alt"></i>
-        <h3>Promoting a Data-Driven Culture:</h3>
-        <ol>
-          <li>
-            <h4>Flow State:</h4> Encouraging a “flow” state—where individuals are deeply immersed in their tasks—boosts
-            productivity. This mental state leads to heightened concentration and clarity, resulting in efficient work.
-          </li>
-          <li>
-            <h4>Data Literacy:</h4> Fostering data literacy among employees enables them to leverage data tools
-            effectively. Proficient workers can exceed expectations, achieve organizational goals, and find fulfillment
-            in their roles.
-          </li>
-        </ol>
-        <!-- <a href="#" class="btn">Read More</a> -->
-        <img src="1.jpeg" alt="" srcset="" class="homeimg">
-      </div>
-
-    </div>
-    </div>
-  </section>
-  </section>
-
-
-
-
-  <!--Portfolio-->
-
-  <!-- <section class="portfolio" id="portfolio">
-    <h2 class="heading">Latest <span>Projects</span></h2>
-
-    <div class="portfolio-container">
-      <div class="portfolio-box">
-        <img src="v3.png" alt="">
-        <div class="portfolio-layer">
-          <h4>Web Designer</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis, ex blanditiis alias ipsam
-            adipisci quis rerum beatae dolorum praesentium? Accusamus nesciunt fugiat velit et nisi aperiam provident
-            opt</p>
-          <a href="#"><i class='bx bx-link-external'></i></a>
-        </div>
-      </div>
-
-
-      <div class="portfolio-box">
-        <img src="p5.png" alt="">
-        <div class="portfolio-layer">
-          <h4>Web Designer</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla perferendis, ex blanditiis alias ipsam
-            adipisci quis rerum beatae dolorum praesentium? Accusamus nesciunt fugiat velit et nisi aperiam provident
-            opt</p>
-          <a href="#"><i class='bx bx-link-external'></i></a>
-        </div>
-      </div>
-    </div>
-
-  </section> -->
-
-
-  <!--skills-->
-  <!-- <section class="skills" id="skills">
-    <h2 class="heading">My <span>skills</span></h2>
-    <div class="skills-row">
-      <div class="skills-column">
-        <h3 class="title">Programming Skills</h3>
-
-        <div class="skills-box">
-          <div class="skills-content">
-            <div class="progress">
-              <h3>HTML <span>90%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>CSS <span>80%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>JavaScript <span>70%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>C <span>80%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>C++ <span>85%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>Python <span>90%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>SQL <span>80%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-          </div>
-
-
-        </div>
-      </div>
-
-      <div class="skills-column">
-        <h3 class="title">Miscellaneous</h3>
-        <div class="skills-box">
-          <div class="skills-content">
-            <div class="progress">
-              <h3>Object Oriented Programming <span>75%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>Data structure <span>60%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-
-            <div class="progress">
-              <h3>DBMS <span>80%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>Linux(OS) <span>80%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>Data Warehousing <span>75%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>Informatica PowerCenter <span>95%</span></h3>
-              <div class="bar"><span></span></div>
-            </div>
-
-            <div class="progress">
-              <h3>Machine Learning <span>95%</span>
-              </h3>
-              <div class="bar"><span></span></div>
-            </div>
-
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="1.jpeg" style="width:100%">
+          <div class="text">
+            <h2>Cost Reduction:</h2>
+            <p>Instead of investing in expensive physical equipment and systems, businesses can use
+              cloud resources, reducing upfront costs. Cloud services are typically pay-as-you-go, allowing businesses
+              to scale resources up or down as needed.</p>
           </div>
         </div>
-      </div>
 
-    </div>
-  </section> -->
-  <!--contact-->
-  <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me!</span></h2>
-
-    <form action="#">
-      <div class="input-box">
-        <div class="input-field">
-          <input type="text" placeholder="full Name" required>
-          <span class="focus"></span>
-        </div>
-        <div class="input-field">
-          <input type="email" placeholder="Email Address" required>
-          <span class="focus"></span>
-        </div>
-      </div>
-      <div class="input-box">
-        <div class="input-field">
-          <input type="phone" placeholder="Phone Number" required>
-          <span class="focus"></span>
-        </div>
-        <!-- <div class="input-field">
-          <input type="email" placeholder="Email Address" required>
-          <span class="focus"></span>
-        </div> -->
-      </div>
-      <div class="textarea-field">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-      </div>
-      <div class="btn-box">
-
-        <input type="submit" value="send message" class="btn">
-      </div>
-
-    </form>
-
-  </section>
-
-  <!--footer-->
-
-  <footer>
-
-    <div class="footer">
-      <div class="section logo">
-        <img src="logo.jpeg" alt="Company Logo">
-        <h5>Techstride Consultencing</h5>
-      </div>
-
-      <div class="section">
-        <h3>Services</h3>
-        <a href="#">Data Science</a><br>
-        <a href="#">Data Analytics</a><br>
-        <a href="#">Full Stack Development</a><br>
-        <a href="#">Cyber Security</a><br>
-        <a href="#">Cloud Computing</a><br>
-        <a href="#">Web Development</a><br>
-      </div>
-
-      <div class="section">
-        <h3>Company</h3>
-        <a href="#">More Abou Us</a><br>
-        <!-- <a href="#">Blogs</a><br> -->
-        <!-- Add more links as needed -->
-      </div>
-      <div class="section">
-        <h3>Policies</h3>
-        <a href="#">Privacy Policy</a><br>
-        <!-- <a href="#">Return Policy</a><br> -->
-        <!-- <a href="#">Saales Policy</a><br> -->
-        <a href="#">Company Policy</a><br>
-        <!-- Add more links as needed -->
-      </div>
-      <div class="section">
-        <h3>Contacts</h3>
-        <a href="#"><img src="mail.svg" alt="" srcset=""></a><br>
-        <a href="tel:+917819055044"><img src="phone.svg" alt="" srcset=""></a><br>
-        <a href="#"><img src="whatsapp.svg" alt="" srcset=""></a><br>
-        <a href="#"><img src="telegram.svg" alt="" srcset=""></a><br>
-        <!-- Add more links as needed -->
-      </div>
-
-      <!-- social media start -->
-      <div class="social-media">
-
-        <div class="footer-social-links">
-          <!-- <a href="https://t.me/+OrTk6UBXiRFkOTA1" title="Facebook" target="_blank"><i class="fa fa-telegram"></i></a> -->
-          <a href="#" title="Twitter" target="_blank"><i class="fa fa-instagram"></i></a>
-          <!-- <a href="#" title="Google+" target="_blank"><i class="fa fa-youtube"></i></a> -->
-          <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-          <a href="#" title="Dribbble" target="_blank"><i class="fa fa-google"></i></a>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="2.jpeg" style="width:100%">
+          <div class="text">
+            <h2>Collaboration and Remote Work:</h2>
+            <p>Cloud-based tools enable seamless collaboration among team members,
+              regardless of their physical location. With remote work becoming more common, cloud environments provide
+              a competitive edge by allowing efficient teamwork and file sharing.</p>
+          </div>
         </div>
 
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="3.jpg" style="width:100%">
+          <div class="text">
+            <h2>Scalability:</h2>
+            <p>Cloud services can easily scale up or down based on demand. Businesses can quickly adapt to changing
+              needs without significant infrastructure adjustments.</p>
+          </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
       </div>
-      <!-- social media end -->
+      <br>
 
-      <!-- <span> © copyright 2024 <a href="#">contact the developer</a></span> -->
-    </div>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
 
-  </footer>
+<div class="3">
+  <h1>Why Choose Us</h1>
+  <p>Our company can help help you by providing these services for your business by providing these serices in low and effective cost</p>
+<div class="grid-container">
+  <div class="grid-item"><h2>Scalability and Flexibility</h2></div>
+  <div class="grid-item"><h2>Cost Efficiency</h2></div>
+  <div class="grid-item"><h2>Data Management and Storage</h2></div>  
+  <div class="grid-item"><h2>Hybrid and Multi-Cloud Solutions</h2></div>
+  <div class="grid-item"><h2>Security and Compliance</h2></div>
+  <div class="grid-item"><h2>Business Continuity and Disaster Recovery</h2></div>  
+  <div class="grid-item"><h2>AI and Machine Learning</h2></div>
+  <div class="grid-item"><h2>Collaboration and Communication</h2></div>
+  <div class="grid-item"><h2>Application Development and Deployment</h2></div>  
+  <div class="grid-item"><h2>Analytics and Insights</h2></div>
+</div>
+</div>
 
-  <!--scroll-->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <!--typed js-->
+  </main>
 
   <script>
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
       }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
     }
   </script>
 
