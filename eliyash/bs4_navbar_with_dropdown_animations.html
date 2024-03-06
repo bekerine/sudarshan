@@ -34,6 +34,7 @@ p {
   margin-top: 20px;
   padding: 8px 25px;
   border-radius: 4px;
+  margin-left: 15rem;
 }
 .button-primary {
   position: relative;
@@ -332,6 +333,64 @@ p {
   }
 }
 
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  right: 50%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=number]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
     </style>
 </head>
 <body>
@@ -411,36 +470,83 @@ p {
 <div class="columns">
   <ul class="price">
     <li class="header">Basic</li>
-    <li class="grey">₹119 / lifetime</li>
+    <li class="grey">₹250 / lifetime</li>
     <li>20% profit share</li>
-    <!-- <li>10 Emails</li>
-    <li>10 Domains</li>
+    <li>Pre order and take away service</li>
+    <!--<li>10 Domains</li>
     <li>1GB Bandwidth</li> -->
-    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+    <button class="button" onclick="openForm()">Sign Up</button>
+
+    <div class="form-popup" id="myForm">
+      <form action="https://formspree.io/f/xwkgqpoo"
+      method="POST" class="form-container">
+        <h1>Login</h1>
+    
+        <label for="email"><b>Whatsapp number</b></label>
+        <input type="number" placeholder="Enter whatsapp Number" name="phone" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
   </ul>
 </div>
 
 <div class="columns" id="fam">
   <ul class="price">
     <li class="header" style="background-color:#04AA6D">Pro</li>
-    <li class="grey">₹249 / lifetime</li>
+    <li class="grey">₹499 / lifetime</li>
     <li>35% profit share</li>
-    <!-- <li>25 Emails</li>
-    <li>25 Domains</li>
+    <li>High recomendation to new customers in your area</li>
+    <li>Pre order and take away service</li>
+    <!-- 
     <li>2GB Bandwidth</li> -->
-    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+    <button class="button" onclick="openForm()">Sign Up</button>
+
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Login</h1>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
   </ul>
 </div>
 
 <div class="columns">
   <ul class="price">
     <li class="header">Premium</li>
-    <li class="grey">₹501 / lifetime</li>
+    <li class="grey">₹699 / lifetime</li>
     <li>50% profit share</li>
-    <!-- <li>50 Emails</li>
-    <li>50 Domains</li>
-    <li>5GB Bandwidth</li> -->
-    <li class="grey"><a href="#" class="button">Sign Up</a></li>
+    <li>High recomendation to new customers in your area</li>
+    <li>Pre order and take away service</li>
+    <li> Hign probability of increase in sale</li>
+    <button class="button" onclick="openForm()">Sign Up</button>
+
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Login</h1>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
   </ul>
 </div>
 
@@ -484,6 +590,16 @@ p {
 	adjustNav();
 });
 </script>
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
 
 <!-- footer start -->
 
