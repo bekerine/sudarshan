@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nickname Generator</title>
+</head>
+<body>
+    <label for="nameInput">Enter your full name:</label>
+    <input type="text" id="nameInput">
+    <button onclick="generateNickname()">Generate Nickname</button>
+    <p id="nickname"></p>
+
+    <script>
+        function generateNickname() {
+            const name = document.getElementById("nameInput").value.toLowerCase();
+            const nicknameElement = document.getElementById("nickname");
+
+            if (name === "smriti rana") {
+                nicknameElement.textContent = "achi bchi";
+            } else {
+                nicknameElement.textContent = "ganda bcha";
+            }
+        }
+    </script>
+</body>
+</html>

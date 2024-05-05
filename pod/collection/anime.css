@@ -23,8 +23,8 @@ h1 {
   justify-content: center;
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #fff;
-  padding-top: 5.5rem;
+  background-color: #F2AA4Cff;
+  padding-top: 5rem;
 }
 
 .tab button {
@@ -46,6 +46,16 @@ h1 {
 #b {
   position: fixed;
   margin-right: 12rem;
+}
+
+#c{
+  position: fixed;
+  margin-left: 14rem;
+}
+
+#d{
+  position: fixed;
+  /* margin-right: 24rem; */
 }
 
 .tab button:hover {

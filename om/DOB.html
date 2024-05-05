@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Your Date of Birth</h1>
+    <input type="date" id="dob" max="9999-12-31">
+    <button onclick="checkBirthday()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkBirthday() {
+            const dobInput = document.getElementById('dob');
+            const dob = new Date(dobInput.value);
+            const today = new Date();
+
+            // Set the year to the current year
+            dob.setFullYear(today.getFullYear());
+
+            if (dob.getMonth() === today.getMonth() && dob.getDate() === today.getDate()) {
+                document.getElementById('result').textContent = 'Happy Birthday!';
+            } else {
+                const timeLeft = dob - today;
+                const daysLeft = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
+                document.getElementById('result').textContent = `Days left until your birthday: ${daysLeft}`;
+            }
+        }
+    </script>
+</body>
+</html>

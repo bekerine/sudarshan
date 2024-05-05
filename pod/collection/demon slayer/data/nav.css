@@ -3,6 +3,7 @@ body {
   padding: 0;
   z-index: 100;
   overflow-x: hidden;
+  background-color: #F2AA4Cff;
 }
 
 a {

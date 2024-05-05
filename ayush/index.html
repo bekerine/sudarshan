@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     
@@ -66,7 +67,112 @@
       
           </nav>
     </header>
+
+<!-- first slider start -->
+    <iframe src="slider.html" frameborder="0"></iframe>
+<!-- first slider end -->
+
+<!-- product slider start -->
+    
+<iframe src="snippets.html" frameborder="0" class="product-slider"></iframe>
+
+<!-- product slider end -->
+
+<!-- why us start -->
+
+<h3><b>WHY-US?</b></h3>
+
+<iframe src="Draggable Image Slider/index.html" frameborder="0" class="why-us"></iframe>
+
+<!-- why us end -->
+
+<!-- chat start -->
+
+<a href="#"><button onclick="topFunction()" id="myBtn" title="Go to top">Chat</button></a>
+
+<!-- chat end -->
+
 </main>
+
+<!-- footer start -->
+
+<footer>
+
+  <div class="footer">
+    <div class="section logo">
+      <img src="logo.jpeg" alt="Company Logo">
+      <h5>Otakunaime</h5>
+    </div>
+    <div class="section">
+      <h3>Company</h3>
+      <a href="#">Abou Us</a><br>
+      <a href="#">Blogs</a><br>
+      <!-- Add more links as needed -->
+    </div>
+    <div class="section">
+      <h3>Policies</h3>
+      <a href="#">Privacy Policy</a><br>
+      <a href="#">Return Policy</a><br>
+      <a href="#">Saales Policy</a><br>
+      <a href="#">Company Policy</a><br>
+      <!-- Add more links as needed -->
+    </div>
+    <div class="section">
+      <h3>Contacts</h3>
+      <a href="#"><img src="mail.svg" alt="" srcset=""></a><br>
+      <a href="tel:+917819055044"><img src="phone.svg" alt="" srcset=""></a><br>
+      <a href="#"><img src="whatsapp.svg" alt="" srcset=""></a><br>
+      <a href="#"><img src="telegram.svg" alt="" srcset=""></a><br>
+      <!-- Add more links as needed -->
+    </div>
+    <!-- <div class="section">
+      <h3>Section 5</h3>
+      <a href="#">Link 1</a><br>
+      <a href="#">Link 2</a><br>
+    </div> -->
+
+    <!-- social media start -->
+    <div class="social-media">
+
+      <div class="footer-social-links">
+        <a href="https://t.me/+OrTk6UBXiRFkOTA1" title="Facebook" target="_blank"><i class="fa fa-telegram"></i></a>
+        <a href="#" title="Twitter" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="#" title="Google+" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="#" title="Dribbble" target="_blank"><i class="fa fa-google"></i></a>
+      </div>
+
+    </div>
+    <!-- social media end -->
+
+    <span> © copyright 2024 <a href="#">contact the developer</a></span>
+  </div>
+
+</footer>
+
+<!-- footer end -->
+
+<script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
 
 </body>
 </html>
