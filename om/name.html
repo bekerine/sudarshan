@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nickname Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #nickname {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <label for="nameInput">Enter your full name:</label>
-    <input type="text" id="nameInput">
+    <input type="text" id="nameInput" placeholder="smriti rana">
     <button onclick="generateNickname()">Generate Nickname</button>
     <p id="nickname"></p>
 
@@ -16,11 +51,15 @@
             const name = document.getElementById("nameInput").value.toLowerCase();
             const nicknameElement = document.getElementById("nickname");
 
+            // Check if the name matches a specific condition
+            let nickname = "";
             if (name === "smriti rana") {
-                nicknameElement.textContent = "achi bchi";
+                nickname = "acha bcha"; // Good girl
             } else {
-                nicknameElement.textContent = "ganda bcha";
+                nickname = "error"; // Naughty boy
             }
+
+            nicknameElement.textContent = `Your Nickname: ${nickname}`;
         }
     </script>
 </body>
