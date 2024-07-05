@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="https://cdn.jsdelivr.net/gh/devXprite/world-chatapp@master/">
+  
+  <title>Realtime World Chat APP</title>
+  <meta name="title" content="Realtime World Chat  APP">
+  <meta name="description" content="This is a simple Realtime Chat app using Firebase. Here you can chat with anyone without Login or SignUP. It
+        helps you to meet new people and make new friends.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chatapp.js.org/">
+  <meta property="og:title" content="Realtime World Chat  APP">
+  <meta property="og:description" content="This is a simple Realtime Chat app using Firebase. Here you can chat with anyone without Login or SignUP. It
+        helps you to meet new people and make new friends.">
+  <meta property="og:image" content="./screenshot/screenshot_pc.png">
+
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://chatapp.js.org/">
+  <meta property="twitter:title" content="Realtime World Chat  APP">
+  <meta property="twitter:description" content="This is a simple Realtime Chat app using Firebase. Here you can chat with anyone without Login or SignUP. It
+        helps you to meet new people and make new friends.">
+  <meta property="twitter:image" content="./screenshot/screenshot_pc.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./src/css/normalize.css">
+  <link rel="stylesheet" href="./src/css/aos.min.css">
+  <link rel="stylesheet" href="./src/css/main.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="scrollbar"></div>
+    <nav>
+      <h1>World Chat App</h1>
+      <i class="fa fa-info-circle" aria-hidden="true" onclick="toogleInfo()"></i>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="info">
+
+      <h2>About</h2>
+      <p>This is a simple Realtime Chat app using Firebase. Here you can chat with anyone without Login or SignUP. It
+        helps you to meet new people and make new friends.</p> <br>
+      <p>View Source or contribute to this project on <a href="https://github.com/7ORP3DO/realtime-chat-app">GitHub</a>.
+      </p> <br><br>
+
+      <p class="details"><b>Your Name : </b> <span id="your-name"> --</span> &nbsp; <i class="fa fa-sign-out"
+          aria-hidden="true" onclick="signOut()"></i> </p>
+      <p class="details"><b>Your Country : </b> <span id="your-country"> --</span> </p>
+      <p class="details"><b>Total Messages : </b> <span id="ttl-msg"> 00</span> </p>
+      <p class="details"><b>Total Views : </b> <span id="ttl-view"> 00</span> </p>
+      <p class="details"><b>Current Time : </b> <span id="crt-time"> 00:00:00</span> </p> <br><br>
+
+      <p class="details"><b>Cookies : </b> <span id="check-cookies"> --</span> </p>
+      <p class="details"><b>Emoji : </b> <span id="check-emoji"> --</span> </p>
+      <p class="details"><b>Unicode : </b> <span id="check-unicode"> --</span> </p>
+      <p class="details"><b>Audio : </b> <span id="check-audio"> --</span> </p>
+
+      <button onclick="window.location.href = 'https://github.com/7ORP3DO/realtime-chat-app'">View Source</button>
+
+    </section>
+
+    <section id="chat">
+       <div class="message-container">
+        <p class="loader">Loading Messages...</p>
+      </div>
+
+      <form id="message-form">
+        <input id="message-input" type="text" placeholder="Your Message" maxlength="250" required />
+        <button id="message-btn" type="submit">Send</button>
+      </form>
+
+    </section>
+  </main>
+
+
+  <script src="./src/javascript/firebase-app.js"></script>
+  <script src="./src/javascript/firebase-database.js"></script>
+  <script src="./firebaseConfig.js"></script>
+  <script src="./src/javascript/jquery.min.js"></script>
+  <script src="./src/javascript/scrollTo.min.js"></script>
+  <script src="./src/javascript/gsap.min.js"></script>
+  <script src="./src/javascript/ScrollTrigger.min.js"></script>
+  <script src="./src/javascript/linkify.min.js"></script>
+  <script src="./src/javascript/linkify-string.min.js"></script>
+  <script src="./src/javascript/countlyFlags.js"></script>
+  <script src="./src/javascript/aos.js"></script>
+  <script src="./src/javascript/spamFilter.js"></script>
+  <script src="./src/javascript/js.cookie.min.js"></script>
+  <script src="./src/javascript/moment.min.js"></script>
+  <script src="./src/javascript/modernizr.min.js"></script>
+  <script src="./src/javascript/moment-timezone-with-data.min.js"></script>
+  <script src="./src/javascript/xss.min.js"></script>
+  <script src="./src/javascript/main.js"></script>
+
+</body>
+
+</html>
